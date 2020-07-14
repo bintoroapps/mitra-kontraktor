@@ -209,13 +209,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 					<div class="options-box clearfix">
 						
 						<!--Search Box-->
-						<div class="search-box-outer">
-							<div class="search-box-btn"><span class="fa fa-search"></span></div>
-						</div>
 						
-						<div class="btn-box">
-							<a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Find Advisor</span></a>
-						</div>
 						
 					</div>
 					

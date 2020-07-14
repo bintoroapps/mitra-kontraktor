@@ -156,7 +156,49 @@ $tracking_code = \App\Controllers\Template::trackingCode();
             </div>
         </div>
         <!-- End Header Lower -->
-    
+            <div class="sticky-header">
+            <div class="auto-container clearfix">
+                <!--Logo-->
+                <div class="logo pull-left">
+                    <a href="index.html" title=""><img src="https://via.placeholder.com/135x50" alt="" title=""></a>
+                </div>
+                <!--Right Col-->
+                <div class="pull-right">
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </nav><!-- Main Menu End-->
+                    
+                    <!-- Options Box -->
+                    <div class="options-box clearfix">
+                        
+                        <!--Search Box-->
+                        <div class="search-box-outer">
+                            <div class="search-box-btn"><span class="fa fa-search"></span></div>
+                        </div>
+                        
+                        <div class="btn-box">
+                            <a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Find Advisor</span></a>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div><!-- End Sticky Menu -->
+        
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><span class="icon flaticon-multiply"></span></div>
+            
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="index.html"><img src="https://via.placeholder.com/220x86" alt="" title=""></a></div>
+                <div class="menu-outer">
+                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                </div>
+            </nav>
+        </div><!-- End Mobile Menu -->
     </header>
     <!-- End Main Header -->
 
@@ -213,20 +255,20 @@ $tracking_code = \App\Controllers\Template::trackingCode();
                             <!-- Footer Column -->
                             <div class="footer-column col-lg-6 col-md-6 col-sm-12">
                                 <div class="footer-widget news-widget">
-                                    <h4>Resent Post</h4>
+                                    <h4>Recent Works</h4>
                                     <!-- Footer Column -->
                                     <div class="widget-content">
+                                         <?php  
+                                            $recent_project = \App\Controllers\Template::getSixRecentProject();
+                                            foreach($recent_project as $p):
+                                        ?>
+                                         
                                         <div class="post">
-                                            <div class="thumb"><a href="news-detail.html"><img src="images/resource/post-thumb-1.jpg" alt=""></a></div>
-                                            <h6><a href="news-detail.html">On these beams, we build dreams.</a></h6>
-                                            <span class="date">24 APRIL 2019</span>
+                                            <div class="thumb"><a href="<?= $p->portfolio_main_image ? base_url('media/' .$p->portfolio_main_image) : 'images/gallery/1.jpg' ?>"><img loading="lazy" src="<?= $p->portfolio_main_image ? base_url('media/' .$p->portfolio_main_image) : 'images/resource/work-thumb-1.jpg' ?>" alt="" title="<?= $p->portfolio_title ?>"></a></div>
+                                            <h6><a href="news-detail.html"><?= $p->portfolio_title ?></a></h6>
+                                            
                                         </div>
-
-                                        <div class="post">
-                                            <div class="thumb"><a href="news-detail.html"><img src="images/resource/post-thumb-2.jpg" alt=""></a></div>
-                                            <h6><a href="news-detail.html">Satisfection for the customer.</a></h6>
-                                            <span class="date">24 APRIL 2019</span>
-                                        </div>
+                                        <?php endforeach; ?>
                                     </div>
                                 </div>
                             </div>
@@ -238,8 +280,8 @@ $tracking_code = \App\Controllers\Template::trackingCode();
                                     <ul>
                                         <li>
                                             <span class="icon flaticon-world"></span>
-                                            <strong>25BT, San Rojartar,</strong>
-                                            New York, United States
+                                            <strong>Jakarta Selatan,</strong>
+                                           DKI Jakarta, Indonesia
                                         </li>
                                         <li>
                                             <span class="icon flaticon-email-3"></span>
@@ -249,7 +291,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
                                         <li>
                                             <span class="icon flaticon-clock-3"></span>
                                             <strong>Working Hours</strong>
-                                            Mon-Sat:9.30am To 7.00pm
+                                            Mon-Fri:8.00am To 5.00pm
                                         </li>
                                     </ul>
                                 </div>
