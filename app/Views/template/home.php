@@ -15,14 +15,15 @@ elseif(!ob_start("ob_gzhandler")) {
 }
 $tracking_code = \App\Controllers\Template::trackingCode();
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
-<?php echo $tracking_code->google_analytic ?>
-<?php echo $tracking_code->google_tags ?>
-<?php echo $tracking_code->google_search_console ?>
+	<?= $tracking_code->google_analytic ?>
+<?= $tracking_code->google_tags ?>
+<?= $tracking_code->google_search_console ?>
 <meta charset="utf-8">
-<title>Mitra Kontraktor || Homepage</title>
+<title>Mitra Konstruktor | Homepage</title>
 
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -57,10 +58,10 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:description" content="<?= $home->home_page_meta_description ?>" />
 <meta name="twitter:title" content="<?= $home->home_page_seo_title ?>" />
+
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-<?php echo $tracking_code->facebook_pixel ?>
-
+<?= $tracking_code->facebook_pixel ?>
 </head>
 
 <body>
@@ -68,6 +69,9 @@ $tracking_code = \App\Controllers\Template::trackingCode();
     $company_data = \App\Controllers\Template::companyData();
 ?>
 <div class="page-wrapper">
+ 	
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
  	
     <!-- Main Header -->
     <header class="main-header header-style-one">
@@ -78,7 +82,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
                 <div class="clearfix">
                     <!--Top Left-->
                     <div class="top-left clearfix">
-						<div class="text">Mitra Kontraktor</div>
+						<div class="text">Mitra Konstruktor</div>
                     </div>
                 </div>
             </div>
@@ -95,8 +99,8 @@ $tracking_code = \App\Controllers\Template::trackingCode();
                         <div class="upper-column info-box">
                             <div class="icon-box"><span class="flaticon-world"></span></div>
                             <ul>
-                                <li><strong>25BT, San Rojartar,</strong></li>
-                                <li>New York, United States</li>
+                                <li><strong>Jakarta Selatan</strong></li>
+                                <li>DKI Jakarta, Indonesia</li>
                             </ul>
                         </div>
                         
@@ -114,7 +118,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
                             <div class="icon-box"><span class="flaticon-clock-3"></span></div>
                             <ul>
 								<li><strong>Working Hours</strong></li>
-                                <li>Mon-Sat:9.30am To 7.00pm</li>
+                                <li>Mon-fri:08.00am To 5.00pm</li>
                             </ul>
                         </div>
                         
@@ -151,28 +155,23 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 							
 							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 								<ul class="navigation clearfix">
-									<li class="current"><a href="/">Home</a></li>
-									<li class="dropdown"><a href="#">About us</a>
-										<ul>
-											<li><a href="/about-us">About us</a></li>
-											<li><a href="/faq">Faq's</a></li>
-                                            <li><a href="/team">Our Team</a></li>
-										</ul>
+									<li class="current"><a href="/">Home</a>
+			
 									</li>
-                                    <li><a href="/services">Services</a>
-                                        <!-- <ul>
-                                            <li><a href="/services">All Services</a></li>
-                                            <li><a href="service-detail.html">Commercial Design</a></li>
-                                            <li><a href="service-detail.html">Landescape Design</a></li>
-                                            <li><a href="service-detail.html">Interior Design</a></li>
-                                            <li><a href="service-detail.html">Complete Interior</a></li>
-                                            <li><a href="service-detail.html">House Interior</a></li>
-                                            <li><a href="service-detail.html">Service Detail</a></li>
-                                        </ul> -->
+                                    <li class="dropdown"><a href="#">About</a>
+                                        <ul>
+                                            <li><a href="/about-us">About Us</a></li>
+                                            <li><a href="/faq">FAQ's</a></li>
+                                            <li><a href="/team">Our Team</a></li>
+                                        </ul>
+                                    </li>
+									 <li><a href="/services">Services</a>
+                                      
                                     </li>
                                     <li><a href="/projects">Projects</a></li>
                                     <li><a href="/blog">Blog</a></li>
                                     <li><a href="/contact">Contact</a></li>
+									
 								 </ul>
 							</div>
 						</nav>
@@ -182,13 +181,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 						<div class="options-box clearfix">
 							
 							<!--Search Box-->
-							<div class="search-box-outer">
-								<div class="search-box-btn"><span class="fa fa-search"></span></div>
-							</div>
-							
-							<div class="btn-box">
-								<a href="contact.html" class="theme-btn btn-style-one"><span class="txt">Find Advisor</span></a>
-							</div>
+
 							
 						</div>
 						
@@ -245,14 +238,325 @@ $tracking_code = \App\Controllers\Template::trackingCode();
     
     </header>
     <!-- End Main Header -->
+
+	<!--Main Slider-->
+    <section class="main-slider">
+    	
+        <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_one_wrapper" data-source="gallery">
+            <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+                <ul>
+                
+                	<li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="https://via.placeholder.com/1720x800" data-title="Slide Title" data-transition="parallaxvertical">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://via.placeholder.com/1720x800"> 
+                    
+					<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="shape"
+                    data-height="auto"
+                    data-whitespace="nowrap"
+                    data-width="['660','1000','750','550']"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['-120','-100','-150','-130']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<div class="title">Constraction Soluction</div>
+                    </div>
+					
+                    <div class="tp-caption" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['660','1000','750','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['-50','-30','-80','-60']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<h1>Your Thought We Build</h1>
+                    </div>
+                    
+                    <div class="tp-caption" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['660','1000','750','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['40','60','10','20']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<div class="text">Manzil Construction Agency Is Proud To Provide Most Reliable <br> Housing & Top Notch Construction Service.</div>
+                    </div>
+                    
+                    <div class="tp-caption tp-resizeme" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['660','1000','750','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['145','160','120','110']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<div class="btns-box">
+							<a href="#" class="theme-btn btn-style-three"><span class="txt">Our Services</span></a>
+                    		<a href="#" class="theme-btn btn-style-two"><span class="txt">Join Us Now</span></a>
+                        </div>
+                    </div>
+					
+					<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="shape"
+                    data-height="auto"
+                    data-whitespace="nowrap"
+                    data-width="none"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['75','15','15','15']"
+                    data-x="['right','right','right','right']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<figure class="content-image"><img src="https://via.placeholder.com/490x700" alt=""></figure>
+                    </div>
+                    
+                    </li>
+                    
+                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="https://via.placeholder.com/1920x950" data-title="Slide Title" data-transition="parallaxvertical">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://via.placeholder.com/1920x950"> 
+                    
+                    <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="shape"
+                    data-height="auto"
+                    data-whitespace="nowrap"
+                    data-width="['660','1000','750','550']"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['-120','-100','-150','-130']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<div class="title">Constraction Soluction</div>
+                    </div>
+					
+                    <div class="tp-caption" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['660','1000','750','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['-50','-30','-80','-60']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<h1>Your Thought We Build</h1>
+                    </div>
+                    
+                    <div class="tp-caption" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['660','1000','750','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['40','60','10','20']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<div class="text">Manzil Construction Agency Is Proud To Provide Most Reliable <br> Housing & Top Notch Construction Service.</div>
+                    </div>
+                    
+                    <div class="tp-caption tp-resizeme" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['660','1000','750','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['145','160','120','110']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<div class="btns-box">
+							<a href="#" class="theme-btn btn-style-three"><span class="txt">Our Services</span></a>
+                    		<a href="#" class="theme-btn btn-style-two"><span class="txt">Join Us Now</span></a>
+                        </div>
+                    </div>
+					
+					<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="shape"
+                    data-height="auto"
+                    data-whitespace="nowrap"
+                    data-width="none"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['55','15','15','15']"
+                    data-x="['right','right','right','right']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<figure class="content-image"><img src="https://via.placeholder.com/490x700" alt=""></figure>
+                    </div>
+                    
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+		
+		<!-- Slider Icon Scroll -->
+		<div class="slider-icon-scroll scroll-to-target" data-target=".about-section"></div>
+		
+    </section>
+    <!--End Main Slider-->
 	
 	<!-- About Section -->
-	
+	<section class="about-section">
+		<div class="auto-container">
+			<div class="inner-container">
+				<div class="row clearfix">
+					
+					<!-- Image Column -->
+					<div class="image-column col-lg-6 col-md-12 col-sm-12">
+						<div class="inner-column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+							<div class="image">
+								<a href="images/resource/about-1.jpg" data-fancybox="about" data-caption="" class="link"><img src="images/resource/about-1.jpg" alt="" /></a>
+								<a href="https://www.youtube.com/watch?v=kxPCFljwJws" class="lightbox-image video-box"><span class="fa fa-play"><i class="ripple"></i></span></a>
+							</div>
+						</div>
+					</div>
+					
+					<!-- Content Column -->
+					<div class="content-column col-lg-6 col-md-12 col-sm-12">
+						<div class="inner-column">
+							<!-- Sec Title -->
+							<div class="sec-title">
+								<div class="title">
+									<!-- Title Effect -->
+									<div class="title-effect">
+										<div class="bar bar-top"></div>
+										<div class="bar bar-right"></div>
+										<div class="bar bar-bottom"></div>
+										<div class="bar bar-left"></div>
+									</div>
+									About Us
+								</div>
+								<h2>We Are The Leader in <br> The Architectura!</h2>
+							</div>
+							<div class="experiance">36 Years Experience Working</div>
+							<div class="text">For each project we establish relationships with partners who we know will help us create added value for your project. As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other who we know will help us create added value for your project.......</div>
+							<div class="btn-box clearfix">
+								<a href="about.html" class="theme-btn btn-style-one"><span class="txt">More About</span></a>
+								<div class="signature">goldBoucher</div>
+							</div>
+							
+							<!-- Fact Counter -->
+							<div class="fact-counter">
+								<div class="row clearfix">
+
+									<!-- Column -->
+									<div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+										<div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+											<div class="content">
+												<div class="icon"><img src="images/icons/counter-1.png" alt="" /></div>
+												<div class="count-outer count-box">
+													<span class="count-text" data-speed="3500" data-stop="150">0</span>+
+												</div>
+												<div class="counter-title">Awards Winner</div>
+											</div>
+										</div>
+									</div>
+
+									<!--Column-->
+									<div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+										<div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+											<div class="content">
+												<div class="icon"><img src="images/icons/counter-2.png" alt="" /></div>
+												<div class="count-outer count-box">
+													<span class="count-text" data-speed="2500" data-stop="5021">0</span>+
+												</div>
+												<div class="counter-title">Satisfied Clients</div>
+											</div>
+										</div>
+									</div>
+
+									<!--Column-->
+									<div class="column counter-column col-lg-4 col-md-4 col-sm-12">
+										<div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+											<div class="content">
+												<div class="icon"><img src="images/icons/counter-3.png" alt="" /></div>
+												<div class="count-outer count-box">
+													<span class="count-text" data-speed="3000" data-stop="201">0</span>+
+												</div>
+												<div class="counter-title">Active projects</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End About Section -->
 	
 	<!-- Services Section -->
 	<section class="services-section">
 		<div class="image-layer" style="background-image:url(https://via.placeholder.com/1366x480)"></div>
-
+		<div class="side-image-layer" style="background-image:url(images/resource/service-5.png)"></div>
+		<div class="side-image-layer-two" style="background-image:url(images/resource/service-6.png)"></div>
 		<div class="auto-container">
 			<!-- Sec Title -->
 			<div class="sec-title light centered">
@@ -576,7 +880,25 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 	<!-- End Services Section -->
 	
 	<!-- Call To Action Section -->
-
+	<section class="call-to-action-section">
+		<div class="auto-container">
+			<div class="inner-container margin-bottom">
+				<div class="image-layer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-image:url(images/resource/call-to-action.png)"></div>
+				<div class="row clearfix">
+					
+					<!-- Column -->
+					<div class="column col-lg-6 col-md-12 col-sm-12">
+						<h4>Looking For Best Partner <br> For Your Next Construction Works?</h4>
+					</div>
+					<!-- Column -->
+					<div class="column col-lg-6 col-md-12 col-sm-12">
+						<a href="about.html" class="theme-btn btn-style-one"><span class="txt">More About</span></a>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
 	<!-- End Call To Action Section -->
 	
 	<!-- Skill Section -->
@@ -1509,19 +1831,18 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 						<div class="footer-widget logo-widget">
 							<div class="widget-content">
 								<div class="logo">
-									<a href="<?php echo base_url() ?>">
-                                    <img loading="lazy" src="<?php echo $company_data->media_id ? base_url('media/' . $company_data->media_name) : base_url('images/logo-2.png') ?>" alt="">
-                                    </a>
+									<a href="<?= base_url() ?>"><img loading="lazy" src="<?= $company_data->media_id ? base_url('media/' . $company_data->media_name) : base_url('images/logo-2.png') ?>" alt=""></a>
 								</div>
 								<div class="text">
-									<p><?php echo $company_data->company_description ?></p>
+									<p><?= $company_data->company_description ?></p>
+								
 								</div>
 								<!-- Social Box -->
 								<ul class="social-box">
-									<li><a href="<?= $company_data->company_facebook ? $company_data->company_facebook : '#' ?>" target="_blank" class="fa fa-facebook-f"></a></li>
+									<li><a href="<?= $company_data->company_facebook ? $company_data->company_facebook : '#' ?>" target="_blank" class="fa fa-facebook"></a></li>
 									<li><a href="<?= $company_data->company_youtube ? $company_data->company_youtube : '#' ?>" target="_blank" class="fa fa-youtube"></a></li>
 									<li><a href="<?= $company_data->company_youtube ? $company_data->company_instagram : '#' ?>" target="_blank" class="fa fa-instagram"></a></li>
-									<li><a href=""<?= $company_data->company_whatsapp ? 'https://api.whatsapp.com/send?phone=62' . str_replace(' ', '', $company_data->company_whatsapp) : '#' ?>" class="fa fa-whatsapp"></a></li>
+									<li><a href="<?= $company_data->company_whatsapp ? 'https://api.whatsapp.com/send?phone=62' . str_replace(' ', '', $company_data->company_whatsapp) : '#' ?>" target="_blank" class="fa fa-whatsapp"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -1535,13 +1856,14 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 								<!-- Column -->
 								<div class="column col-lg-6 col-sm-6 col-sm-12">
 									<ul class="list-link">
-										  <li><a href="<?= base_url('about-us') ?>">About</a></li>
+										 <li><a href="<?= base_url('about-us') ?>">About</a></li>
                                             <li><a href="<?= base_url('services') ?>">Services</a></li>
                                             <li><a href="<?= base_url('projects') ?>">Project</a></li>
                                             <li><a href="<?= base_url('blog') ?>">Blog</a></li>
                                             <li><a href="<?= base_url('contact') ?>">Contact Us</a></li>
 									</ul>
 								</div>
+								<!-- Column -->
 							</div>
 							
 						</div>
@@ -1554,8 +1876,8 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 							<ul>
 								<li>
 									<span class="icon flaticon-world"></span>
-									<strong>25BT, San Rojartar,</strong>
-									New York, United States
+									<strong>Jakarta Selatan,</strong>
+									DKI Jakarta, Indonesia
 								</li>
 								<li>
 									<span class="icon flaticon-email-3"></span>
@@ -1565,7 +1887,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 								<li>
 									<span class="icon flaticon-clock-3"></span>
 									<strong>Working Hours</strong>
-									Mon-Sat:9.30am To 7.00pm
+									Mon-fri:08.00am To 5.00pm
 								</li>
 							</ul>
 						</div>
