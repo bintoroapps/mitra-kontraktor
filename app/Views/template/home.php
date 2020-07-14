@@ -18,9 +18,9 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 <!DOCTYPE html>
 <html>
 <head>
-<?= $tracking_code->google_analytic ?>
-<?= $tracking_code->google_tags ?>
-<?= $tracking_code->google_search_console ?>
+<?php echo $tracking_code->google_analytic ?>
+<?php echo $tracking_code->google_tags ?>
+<?php echo $tracking_code->google_search_console ?>
 <meta charset="utf-8">
 <title>Mitra Kontraktor || Homepage</title>
 
@@ -59,7 +59,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 <meta name="twitter:title" content="<?= $home->home_page_seo_title ?>" />
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-<?= $tracking_code->facebook_pixel ?>
+<?php echo $tracking_code->facebook_pixel ?>
 
 </head>
 
@@ -245,233 +245,1260 @@ $tracking_code = \App\Controllers\Template::trackingCode();
     
     </header>
     <!-- End Main Header -->
-
-	<!--Main Slider-->
-    <section class="main-slider">
-    	
-        <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_one_wrapper" data-source="gallery">
-            <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
-                <ul>
-                
-                	<li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="https://via.placeholder.com/1720x800" data-title="Slide Title" data-transition="parallaxvertical">
-                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://via.placeholder.com/1720x800"> 
-                    
-					<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="shape"
-                    data-height="auto"
-                    data-whitespace="nowrap"
-                    data-width="['660','1000','750','550']"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['-120','-100','-150','-130']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<div class="title">Constraction Soluction</div>
-                    </div>
-					
-                    <div class="tp-caption" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['660','1000','750','550']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['-50','-30','-80','-60']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<h1>Your Thought We Build</h1>
-                    </div>
-                    
-                    <div class="tp-caption" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['660','1000','750','550']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['40','60','10','20']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<div class="text">Manzil Construction Agency Is Proud To Provide Most Reliable <br> Housing & Top Notch Construction Service.</div>
-                    </div>
-                    
-                    <div class="tp-caption tp-resizeme" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['660','1000','750','550']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['145','160','120','110']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<div class="btns-box">
-							<a href="#" class="theme-btn btn-style-three"><span class="txt">Our Services</span></a>
-                    		<a href="#" class="theme-btn btn-style-two"><span class="txt">Join Us Now</span></a>
-                        </div>
-                    </div>
-					
-					<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="shape"
-                    data-height="auto"
-                    data-whitespace="nowrap"
-                    data-width="none"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['75','15','15','15']"
-                    data-x="['right','right','right','right']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<figure class="content-image"><img src="https://via.placeholder.com/490x700" alt=""></figure>
-                    </div>
-                    
-                    </li>
-                    
-                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="https://via.placeholder.com/1920x950" data-title="Slide Title" data-transition="parallaxvertical">
-                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="https://via.placeholder.com/1920x950"> 
-                    
-                    <div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="shape"
-                    data-height="auto"
-                    data-whitespace="nowrap"
-                    data-width="['660','1000','750','550']"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['-120','-100','-150','-130']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<div class="title">Constraction Soluction</div>
-                    </div>
-					
-                    <div class="tp-caption" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['660','1000','750','550']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['-50','-30','-80','-60']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<h1>Your Thought We Build</h1>
-                    </div>
-                    
-                    <div class="tp-caption" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['660','1000','750','550']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['40','60','10','20']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<div class="text">Manzil Construction Agency Is Proud To Provide Most Reliable <br> Housing & Top Notch Construction Service.</div>
-                    </div>
-                    
-                    <div class="tp-caption tp-resizeme" 
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="text"
-                    data-height="none"
-                    data-width="['660','1000','750','550']"
-                    data-whitespace="normal"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['145','160','120','110']"
-                    data-x="['left','left','left','left']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-textalign="['top','top','top','top']"
-                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<div class="btns-box">
-							<a href="#" class="theme-btn btn-style-three"><span class="txt">Our Services</span></a>
-                    		<a href="#" class="theme-btn btn-style-two"><span class="txt">Join Us Now</span></a>
-                        </div>
-                    </div>
-					
-					<div class="tp-caption tp-shape tp-shapewrapper tp-resizeme"
-                    data-paddingbottom="[0,0,0,0]"
-                    data-paddingleft="[0,0,0,0]"
-                    data-paddingright="[0,0,0,0]"
-                    data-paddingtop="[0,0,0,0]"
-                    data-responsive_offset="on"
-                    data-type="shape"
-                    data-height="auto"
-                    data-whitespace="nowrap"
-                    data-width="none"
-                    data-hoffset="['15','15','15','15']"
-                    data-voffset="['55','15','15','15']"
-                    data-x="['right','right','right','right']"
-                    data-y="['middle','middle','middle','middle']"
-                    data-frames='[{"from":"x:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1000,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
-                    	<figure class="content-image"><img src="https://via.placeholder.com/490x700" alt=""></figure>
-                    </div>
-                    
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-		
-		<!-- Slider Icon Scroll -->
-		<div class="slider-icon-scroll scroll-to-target" data-target=".about-section"></div>
-		
-    </section>
-    <!--End Main Slider-->
 	
 	<!-- About Section -->
 	
 	
+	<!-- Services Section -->
+	<section class="services-section">
+		<div class="image-layer" style="background-image:url(https://via.placeholder.com/1366x480)"></div>
+
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title light centered">
+				<div class="title">
+					<!-- Title Effect -->
+					<div class="title-effect">
+						<div class="bar bar-top"></div>
+						<div class="bar bar-right"></div>
+						<div class="bar bar-bottom"></div>
+						<div class="bar bar-left"></div>
+					</div>
+					Our Service
+				</div>
+				<h2>We Will Satisfy You By Our <br> Servicing Plan</h2>
+			</div>
+			<div class="four-item-carousel owl-carousel owl-theme">
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-1.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="property-sketching.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="property-sketching.html">Property Sketching</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-2.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="interior-design.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="interior-design.html">Interior Designing</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-3.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="interior-design.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="interior-design.html">Exterior Design</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-4.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="plan-certification.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="plan-certification.html">Plan Estimations</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-1.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="property-sketching.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="property-sketching.html">Property Sketching</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-2.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="interior-design.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="interior-design.html">Interior Designing</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-3.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="interior-design.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="interior-design.html">Exterior Design</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-4.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="plan-certification.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="plan-certification.html">Plan Estimations</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-1.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="property-sketching.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="property-sketching.html">Property Sketching</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-2.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="interior-design.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="interior-design.html">Interior Designing</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-3.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="interior-design.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="interior-design.html">Exterior Design</a></h5>
+						</div>
+					</div>
+				</div>
+				
+				<!-- Service Block -->
+				<div class="service-block">
+					<div class="inner-box">
+						<figure class="image-box">
+							<img src="images/resource/service-4.jpg" alt="">
+							<!--Overlay Box-->
+							<div class="overlay-box">
+								<div class="overlay-inner">
+									<div class="content">
+										<div class="icon-box">
+											<span class="icon flaticon-mall-1"></span>
+										</div>
+										<div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+										<a href="plan-certification.html" class="read-more">Read More</a>
+									</div>
+								</div>
+							</div>
+						</figure>
+						<!-- Lower Box -->
+						<div class="lower-box">
+							<h5><a href="plan-certification.html">Plan Estimations</a></h5>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Services Section -->
 	
+	<!-- Call To Action Section -->
+
+	<!-- End Call To Action Section -->
+	
+	<!-- Skill Section -->
+	<section class="skill-section" style="background-image:url(images/background/2.jpg)">
+		<div class="image-layer" style="background-image:url(images/background/pattern-2.png)"></div>
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title centered">
+				<div class="title">
+					<!-- Title Effect -->
+					<div class="title-effect">
+						<div class="bar bar-top"></div>
+						<div class="bar bar-right"></div>
+						<div class="bar bar-bottom"></div>
+						<div class="bar bar-left"></div>
+					</div>
+					Our Skills
+				</div>
+				<h2>We are giving you a chance <br> to build your dream</h2>
+			</div>
+			<div class="row clearfix">
+				
+				<!-- Skill Column -->
+				<div class="skill-column col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						
+						<div class="skill-block">
+							<div class="bar-item">
+								<div class="skill-title">General Consulting</div>
+								<div class="skill-bar">
+									<div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="99">0</span>%</div></div>
+									<div class="bar-inner"><div class="bar progress-line" data-height="99"></div></div>
+								</div>
+							</div>
+							<div class="bar-item">
+								<div class="skill-title">Construction Management</div>
+								<div class="skill-bar">
+									<div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="99">0</span>%</div></div>
+									<div class="bar-inner"><div class="bar progress-line" data-height="99"></div></div>
+								</div>
+							</div>
+							<div class="bar-item">
+								<div class="skill-title">Design & Build</div>
+								<div class="skill-bar">
+									<div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="60">0</span>%</div></div>
+									<div class="bar-inner"><div class="bar progress-line" data-height="60"></div></div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+				<!-- Image Column -->
+				<div class="image-column col-lg-4 col-md-12 col-sm-12">
+					<div class="inner-column wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="image">
+							<img src="images/resource/accordian.png" alt="" />
+						</div>
+					</div>
+				</div>
+				
+				<!-- Skill Column -->
+				<div class="skill-column right-column col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-column wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+						
+						<div class="skill-block">
+							<div class="bar-item">
+								<div class="skill-title">General Consulting</div>
+								<div class="skill-bar">
+									<div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="65">0</span>%</div></div>
+									<div class="bar-inner"><div class="bar progress-line" data-height="65"></div></div>
+								</div>
+							</div>
+							<div class="bar-item">
+								<div class="skill-title">Construction Management</div>
+								<div class="skill-bar">
+									<div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="75">0</span>%</div></div>
+									<div class="bar-inner"><div class="bar progress-line" data-height="75"></div></div>
+								</div>
+							</div>
+							<div class="bar-item">
+								<div class="skill-title">Design & Build</div>
+								<div class="skill-bar">
+									<div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="90">0</span>%</div></div>
+									<div class="bar-inner"><div class="bar progress-line" data-height="90"></div></div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Skill Section -->
+	
+	<!-- Testimonial Section -->
+	<section class="testimonial-section" style="background-image:url(https://via.placeholder.com/1920x930)">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title light">
+				<div class="title">
+					<!-- Title Effect -->
+					<div class="title-effect">
+						<div class="bar bar-top"></div>
+						<div class="bar bar-right"></div>
+						<div class="bar bar-bottom"></div>
+						<div class="bar bar-left"></div>
+					</div>
+					Testimonial
+				</div>
+				<h2>We Have Many Satisfied <br> Clients Say About Us</h2>
+			</div>
+			<div class="testimonial-carousel owl-carousel owl-theme">
+				
+				<!-- Testimonial Block -->
+				<div class="testimonial-block">
+					<div class="inner-box">
+						<div class="quote-icon flaticon-quote-4"></div>
+						<div class="rating">
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star-o"></span>
+						</div>
+						<div class="text">“Makin their way the only way they know how that’s just a little bit more than the law will allow these happy days are you. leads a rag tag fugitive fleet on a lonely”</div>
+						<h6>Malika Morla</h6>
+						<div class="author-image">
+							<img src="images/resource/author-1.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				
+				<!-- Testimonial Block -->
+				<div class="testimonial-block">
+					<div class="inner-box">
+						<div class="quote-icon flaticon-quote-4"></div>
+						<div class="rating">
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star-o"></span>
+						</div>
+						<div class="text">Don’t buy this theme, you won’t be able to resist its charm. Right, like you’re charmed. A theme that is truly multipurpose and flexible.</div>
+						<h6>Smith Makan</h6>
+						<div class="author-image">
+							<img src="images/resource/author-2.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				
+				<!-- Testimonial Block -->
+				<div class="testimonial-block">
+					<div class="inner-box">
+						<div class="quote-icon flaticon-quote-4"></div>
+						<div class="rating">
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star-o"></span>
+						</div>
+						<div class="text">Interesting design and concept, beautiful presentation and functional features are what make this theme worth your time, money and effort.</div>
+						<h6>Rajor Fatia</h6>
+						<div class="author-image">
+							<img src="images/resource/author-3.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				
+				<!-- Testimonial Block -->
+				<div class="testimonial-block">
+					<div class="inner-box">
+						<div class="quote-icon flaticon-quote-4"></div>
+						<div class="rating">
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star-o"></span>
+						</div>
+						<div class="text">“Makin their way the only way they know how that’s just a little bit more than the law will allow these happy days are you. leads a rag tag fugitive fleet on a lonely”</div>
+						<h6>Malika Morla</h6>
+						<div class="author-image">
+							<img src="images/resource/author-1.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				
+				<!-- Testimonial Block -->
+				<div class="testimonial-block">
+					<div class="inner-box">
+						<div class="quote-icon flaticon-quote-4"></div>
+						<div class="rating">
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star-o"></span>
+						</div>
+						<div class="text">Don’t buy this theme, you won’t be able to resist its charm. Right, like you’re charmed. A theme that is truly multipurpose and flexible.</div>
+						<h6>Smith Makan</h6>
+						<div class="author-image">
+							<img src="images/resource/author-2.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				
+				<!-- Testimonial Block -->
+				<div class="testimonial-block">
+					<div class="inner-box">
+						<div class="quote-icon flaticon-quote-4"></div>
+						<div class="rating">
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star"></span>
+							<span class="fa fa-star-o"></span>
+						</div>
+						<div class="text">Interesting design and concept, beautiful presentation and functional features are what make this theme worth your time, money and effort.</div>
+						<h6>Rajor Fatia</h6>
+						<div class="author-image">
+							<img src="images/resource/author-3.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- Lower Text -->
+			<div class="lower-text">Don’t think so more about success rate. <a href="#">Let’s get started</a></div>
+			
+		</div>
+	</section>
+	<!-- End Testimonial Section -->
+	
+	<!-- Gallery Section -->
+	<section class="gallery-section">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title centered">
+				<div class="title">
+					<!-- Title Effect -->
+					<div class="title-effect">
+						<div class="bar bar-top"></div>
+						<div class="bar bar-right"></div>
+						<div class="bar bar-bottom"></div>
+						<div class="bar bar-left"></div>
+					</div>
+					Projects
+				</div>
+				<h2>Our Latest Projects Check <br> Now Dears</h2>
+			</div>
+			<!--MixitUp Galery-->
+            <div class="mixitup-gallery">
+                
+                <!--Filter-->
+                <div class="filters clearfix">
+                	
+                	<ul class="filter-tabs filter-btns text-center clearfix">
+                        <li class="active filter" data-role="button" data-filter="all">All Cases</li>
+                        <li class="filter" data-role="button" data-filter=".building">Buildings</li>
+                        <li class="filter" data-role="button" data-filter=".bridge">Modern Bridge</li>
+                        <li class="filter" data-role="button" data-filter=".houses">Houses</li>
+                        <li class="filter" data-role="button" data-filter=".interiors">Interiors</li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="filter-list row clearfix">
+					
+					<!-- Gallery Block -->
+					<div class="gallery-block mix all houses interiors col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<figure class="image-box">
+								<img src="https://via.placeholder.com/370x370" alt="">
+								<!-- Overlay Box -->
+								<div class="overlay-box">
+									<div class="overlay-inner">
+										<div class="content">
+											<h6><a href="portfolio-detail.html">Construction Build</a></h6>
+											<div class="category">Roof Filling</div>
+										</div>
+									</div>
+								</div>
+								<a href="https://via.placeholder.com/370x370" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-full-screen"></span></a>
+							</figure>
+						</div>
+					</div>
+					
+					<!-- Gallery Block -->
+					<div class="gallery-block mix all building interiors col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<figure class="image-box">
+								<img src="https://via.placeholder.com/370x370" alt="">
+								<!-- Overlay Box -->
+								<div class="overlay-box">
+									<div class="overlay-inner">
+										<div class="content">
+											<h6><a href="portfolio-detail.html">Construction Build</a></h6>
+											<div class="category">Roof Filling</div>
+										</div>
+									</div>
+								</div>
+								<a href="https://via.placeholder.com/370x370" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-full-screen"></span></a>
+							</figure>
+						</div>
+					</div>
+					
+					<!-- Gallery Block -->
+					<div class="gallery-block mix all houses interiors col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<figure class="image-box">
+								<img src="https://via.placeholder.com/370x370" alt="">
+								<!-- Overlay Box -->
+								<div class="overlay-box">
+									<div class="overlay-inner">
+										<div class="content">
+											<h6><a href="portfolio-detail.html">Construction Build</a></h6>
+											<div class="category">Roof Filling</div>
+										</div>
+									</div>
+								</div>
+								<a href="https://via.placeholder.com/370x370" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-full-screen"></span></a>
+							</figure>
+						</div>
+					</div>
+					
+					<!-- Gallery Block -->
+					<div class="gallery-block mix all houses building bridge col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<figure class="image-box">
+								<img src="https://via.placeholder.com/370x370" alt="">
+								<!-- Overlay Box -->
+								<div class="overlay-box">
+									<div class="overlay-inner">
+										<div class="content">
+											<h6><a href="portfolio-detail.html">Construction Build</a></h6>
+											<div class="category">Roof Filling</div>
+										</div>
+									</div>
+								</div>
+								<a href="https://via.placeholder.com/370x370" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-full-screen"></span></a>
+							</figure>
+						</div>
+					</div>
+					
+					<!-- Gallery Block -->
+					<div class="gallery-block mix all houses interiors col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<figure class="image-box">
+								<img src="https://via.placeholder.com/370x370" alt="">
+								<!-- Overlay Box -->
+								<div class="overlay-box">
+									<div class="overlay-inner">
+										<div class="content">
+											<h6><a href="portfolio-detail.html">Construction Build</a></h6>
+											<div class="category">Roof Filling</div>
+										</div>
+									</div>
+								</div>
+								<a href="https://via.placeholder.com/370x370" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-full-screen"></span></a>
+							</figure>
+						</div>
+					</div>
+					
+					<!-- Gallery Block -->
+					<div class="gallery-block mix all bridge building col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<figure class="image-box">
+								<img src="https://via.placeholder.com/370x370" alt="">
+								<!-- Overlay Box -->
+								<div class="overlay-box">
+									<div class="overlay-inner">
+										<div class="content">
+											<h6><a href="portfolio-detail.html">Construction Build</a></h6>
+											<div class="category">Roof Filling</div>
+										</div>
+									</div>
+								</div>
+								<a href="https://via.placeholder.com/370x370" data-fancybox="gallery-1" data-caption="" class="link"><span class="icon flaticon-full-screen"></span></a>
+							</figure>
+						</div>
+					</div>
+					
+				</div>
+				
+			</div>
+			
+			<!-- Lower Text -->
+			<div class="lower-text">
+				<div class="text">If you want to more project then you <a href="projects.html">Click Here Now</a></div>
+			</div>
+			
+		</div>
+	</section>
+	<!-- End Gallery Section -->
+	
+	<!-- Team Section -->
+	<section class="team-section">
+		<div class="image-layer" style="background-image:url(https://via.placeholder.com/1920x600)"></div>
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title light centered">
+				<div class="title">
+					<!-- Title Effect -->
+					<div class="title-effect">
+						<div class="bar bar-top"></div>
+						<div class="bar bar-right"></div>
+						<div class="bar bar-bottom"></div>
+						<div class="bar bar-left"></div>
+					</div>
+					Our Team
+				</div>
+				<h2>Our Expert Team Members <br> Will Help You</h2>
+			</div>
+			<div class="three-item-carousel owl-carousel owl-theme">
+				
+				<!-- Team Block -->
+				<div class="team-block">
+					<div class="inner-box">
+						<div class="image">
+							<img src="images/resource/team-1.jpg" alt="" />
+							<!-- Social Box -->
+							<ul class="social-box">
+								<li><a href="#" class="fa fa-facebook-f"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-google"></a></li>
+							</ul>
+						</div>
+						<div class="lower-content">
+							<h5><a href="team-detail.html">Celsiya Malocm</a></h5>
+							<div class="designation">Builder Advisor</div>
+							<!-- Arrows -->
+							<a href="team-detail.html" class="team-arrows-right">
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Team Block -->
+				<div class="team-block">
+					<div class="inner-box">
+						<div class="image">
+							<img src="images/resource/team-2.jpg" alt="" />
+							<!-- Social Box -->
+							<ul class="social-box">
+								<li><a href="#" class="fa fa-facebook-f"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-google"></a></li>
+							</ul>
+						</div>
+						<div class="lower-content">
+							<h5><a href="team-detail.html">Nelson Mecoy</a></h5>
+							<div class="designation">Architecture</div>
+							<!-- Arrows -->
+							<a href="team-detail.html" class="team-arrows-right">
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Team Block -->
+				<div class="team-block">
+					<div class="inner-box">
+						<div class="image">
+							<img src="images/resource/team-3.jpg" alt="" />
+							<!-- Social Box -->
+							<ul class="social-box">
+								<li><a href="#" class="fa fa-facebook-f"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-google"></a></li>
+							</ul>
+						</div>
+						<div class="lower-content">
+							<h5><a href="team-detail.html">Andrea Spilber</a></h5>
+							<div class="designation">Project Manager</div>
+							<!-- Arrows -->
+							<a href="team-detail.html" class="team-arrows-right">
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Team Block -->
+				<div class="team-block">
+					<div class="inner-box">
+						<div class="image">
+							<img src="images/resource/team-1.jpg" alt="" />
+							<!-- Social Box -->
+							<ul class="social-box">
+								<li><a href="#" class="fa fa-facebook-f"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-google"></a></li>
+							</ul>
+						</div>
+						<div class="lower-content">
+							<h5><a href="team-detail.html">Celsiya Malocm</a></h5>
+							<div class="designation">Builder Advisor</div>
+							<!-- Arrows -->
+							<a href="team-detail.html" class="team-arrows-right">
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Team Block -->
+				<div class="team-block">
+					<div class="inner-box">
+						<div class="image">
+							<img src="images/resource/team-2.jpg" alt="" />
+							<!-- Social Box -->
+							<ul class="social-box">
+								<li><a href="#" class="fa fa-facebook-f"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-google"></a></li>
+							</ul>
+						</div>
+						<div class="lower-content">
+							<h5><a href="team-detail.html">Nelson Mecoy</a></h5>
+							<div class="designation">Architecture</div>
+							<!-- Arrows -->
+							<a href="team-detail.html" class="team-arrows-right">
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Team Block -->
+				<div class="team-block">
+					<div class="inner-box">
+						<div class="image">
+							<img src="images/resource/team-3.jpg" alt="" />
+							<!-- Social Box -->
+							<ul class="social-box">
+								<li><a href="#" class="fa fa-facebook-f"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-google"></a></li>
+							</ul>
+						</div>
+						<div class="lower-content">
+							<h5><a href="team-detail.html">Andrea Spilber</a></h5>
+							<div class="designation">Project Manager</div>
+							<!-- Arrows -->
+							<a href="team-detail.html" class="team-arrows-right">
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Team Block -->
+				<div class="team-block">
+					<div class="inner-box">
+						<div class="image">
+							<img src="images/resource/team-1.jpg" alt="" />
+							<!-- Social Box -->
+							<ul class="social-box">
+								<li><a href="#" class="fa fa-facebook-f"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-google"></a></li>
+							</ul>
+						</div>
+						<div class="lower-content">
+							<h5><a href="team-detail.html">Celsiya Malocm</a></h5>
+							<div class="designation">Builder Advisor</div>
+							<!-- Arrows -->
+							<a href="team-detail.html" class="team-arrows-right">
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Team Block -->
+				<div class="team-block">
+					<div class="inner-box">
+						<div class="image">
+							<img src="images/resource/team-2.jpg" alt="" />
+							<!-- Social Box -->
+							<ul class="social-box">
+								<li><a href="#" class="fa fa-facebook-f"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-google"></a></li>
+							</ul>
+						</div>
+						<div class="lower-content">
+							<h5><a href="team-detail.html">Nelson Mecoy</a></h5>
+							<div class="designation">Architecture</div>
+							<!-- Arrows -->
+							<a href="team-detail.html" class="team-arrows-right">
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				
+				<!-- Team Block -->
+				<div class="team-block">
+					<div class="inner-box">
+						<div class="image">
+							<img src="images/resource/team-3.jpg" alt="" />
+							<!-- Social Box -->
+							<ul class="social-box">
+								<li><a href="#" class="fa fa-facebook-f"></a></li>
+								<li><a href="#" class="fa fa-linkedin"></a></li>
+								<li><a href="#" class="fa fa-twitter"></a></li>
+								<li><a href="#" class="fa fa-google"></a></li>
+							</ul>
+						</div>
+						<div class="lower-content">
+							<h5><a href="team-detail.html">Andrea Spilber</a></h5>
+							<div class="designation">Project Manager</div>
+							<!-- Arrows -->
+							<a href="team-detail.html" class="team-arrows-right">
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+								<div class="chevron"></div>
+							</a>
+							
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- End Team Section -->
+	
+	<!-- News Section -->
+	<section class="news-section">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title">
+				<div class="title">
+					<!-- Title Effect -->
+					<div class="title-effect">
+						<div class="bar bar-top"></div>
+						<div class="bar bar-right"></div>
+						<div class="bar bar-bottom"></div>
+						<div class="bar bar-left"></div>
+					</div>
+					Our Latest New
+				</div>
+				<h2>Learn Something More <br> From Our News and Artical</h2>
+			</div>
+			
+			<div class="single-item-carousel owl-carousel owl-theme">
+			
+				<div class="slide">
+			
+					<div class="row clearfix">
+						
+						<!-- Column -->
+						<div class="column col-lg-8 col-md-12 col-sm-12">
+						
+							<!-- News Block -->
+							<div class="news-block">
+								<div class="inner-box">
+									<div class="image">
+										<div class="post-date">20 / 12 / 2020</div>
+										<a href="news-detail.html"><img src="images/resource/news-1.jpg" alt="" /></a>
+									</div>
+									<div class="lower-content">
+										<ul class="post-meta">
+											<li>24 Likes</li>
+											<li>3 Comments</li>
+											<li>By Admin Rose</li>
+										</ul>
+										<h3><a href="news-detail.html">Building Public Support For A Severige work Bond in your Smart Referendum</a></h3>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<!-- Column -->
+						<div class="column col-lg-4 col-md-12 col-sm-12">
+							
+							<!-- News Block Two -->
+							<div class="news-block-two">
+								<div class="inner-box">
+									<div class="image">
+										<div class="post-date">20 / 12 / 2019</div>
+										<a href="news-detail.html"><img src="images/resource/news-2.jpg" alt="" /></a>
+									</div>
+									<div class="lower-content">
+										<ul class="post-meta">
+											<li>24 Likes</li>
+											<li>3 Comments</li>
+											<li>By Admin Rose</li>
+										</ul>
+										<h4><a href="news-detail.html">High quality work for demand our customer.</a></h4>
+									</div>
+								</div>
+							</div>
+							
+							<!-- News Block Two -->
+							<div class="news-block-two">
+								<div class="inner-box">
+									<div class="image">
+										<div class="post-date">20 / 12 / 2019</div>
+										<a href="news-detail.html"><img src="images/resource/news-3.jpg" alt="" /></a>
+									</div>
+									<div class="lower-content">
+										<ul class="post-meta">
+											<li>24 Likes</li>
+											<li>3 Comments</li>
+											<li>By Admin Rose</li>
+										</ul>
+										<h4><a href="news-detail.html">Satisfection for the customer our first parity.</a></h4>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+				</div>
+				
+				<div class="slide">
+			
+					<div class="row clearfix">
+						
+						<!-- Column -->
+						<div class="column col-lg-8 col-md-12 col-sm-12">
+						
+							<!-- News Block -->
+							<div class="news-block">
+								<div class="inner-box">
+									<div class="image">
+										<div class="post-date">20 / 12 / 2020</div>
+										<a href="news-detail.html"><img src="images/resource/news-1.jpg" alt="" /></a>
+									</div>
+									<div class="lower-content">
+										<ul class="post-meta">
+											<li>24 Likes</li>
+											<li>3 Comments</li>
+											<li>By Admin Rose</li>
+										</ul>
+										<h3><a href="news-detail.html">Building Public Support For A Severige work Bond in your Smart Referendum</a></h3>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<!-- Column -->
+						<div class="column col-lg-4 col-md-12 col-sm-12">
+							
+							<!-- News Block Two -->
+							<div class="news-block-two">
+								<div class="inner-box">
+									<div class="image">
+										<div class="post-date">20 / 12 / 2019</div>
+										<a href="news-detail.html"><img src="images/resource/news-2.jpg" alt="" /></a>
+									</div>
+									<div class="lower-content">
+										<ul class="post-meta">
+											<li>24 Likes</li>
+											<li>3 Comments</li>
+											<li>By Admin Rose</li>
+										</ul>
+										<h4><a href="news-detail.html">High quality work for demand our customer.</a></h4>
+									</div>
+								</div>
+							</div>
+							
+							<!-- News Block Two -->
+							<div class="news-block-two">
+								<div class="inner-box">
+									<div class="image">
+										<div class="post-date">20 / 12 / 2019</div>
+										<a href="news-detail.html"><img src="images/resource/news-3.jpg" alt="" /></a>
+									</div>
+									<div class="lower-content">
+										<ul class="post-meta">
+											<li>24 Likes</li>
+											<li>3 Comments</li>
+											<li>By Admin Rose</li>
+										</ul>
+										<h4><a href="news-detail.html">Satisfection for the customer our first parity.</a></h4>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+				</div>
+				
+				<div class="slide">
+			
+					<div class="row clearfix">
+						
+						<!-- Column -->
+						<div class="column col-lg-8 col-md-12 col-sm-12">
+						
+							<!-- News Block -->
+							<div class="news-block">
+								<div class="inner-box">
+									<div class="image">
+										<div class="post-date">20 / 12 / 2020</div>
+										<a href="news-detail.html"><img src="images/resource/news-1.jpg" alt="" /></a>
+									</div>
+									<div class="lower-content">
+										<ul class="post-meta">
+											<li>24 Likes</li>
+											<li>3 Comments</li>
+											<li>By Admin Rose</li>
+										</ul>
+										<h3><a href="news-detail.html">Building Public Support For A Severige work Bond in your Smart Referendum</a></h3>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<!-- Column -->
+						<div class="column col-lg-4 col-md-12 col-sm-12">
+							
+							<!-- News Block Two -->
+							<div class="news-block-two">
+								<div class="inner-box">
+									<div class="image">
+										<div class="post-date">20 / 12 / 2019</div>
+										<a href="news-detail.html"><img src="images/resource/news-2.jpg" alt="" /></a>
+									</div>
+									<div class="lower-content">
+										<ul class="post-meta">
+											<li>24 Likes</li>
+											<li>3 Comments</li>
+											<li>By Admin Rose</li>
+										</ul>
+										<h4><a href="news-detail.html">High quality work for demand our customer.</a></h4>
+									</div>
+								</div>
+							</div>
+							
+							<!-- News Block Two -->
+							<div class="news-block-two">
+								<div class="inner-box">
+									<div class="image">
+										<div class="post-date">20 / 12 / 2019</div>
+										<a href="news-detail.html"><img src="images/resource/news-3.jpg" alt="" /></a>
+									</div>
+									<div class="lower-content">
+										<ul class="post-meta">
+											<li>24 Likes</li>
+											<li>3 Comments</li>
+											<li>By Admin Rose</li>
+										</ul>
+										<h4><a href="news-detail.html">Satisfection for the customer our first parity.</a></h4>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+					</div>
+				
+				</div>
+				
+			</div>
+			
+		</div>
+	</section>
+	<!-- End News Section -->
 	
 	<!-- Main Footer -->
-    <footer class="main-footer" style="background-image:url(https://via.placeholder.com/1920x718)">
+    <footer class="main-footer" style="background-image: url(<?= $company_data->company_footer ? base_url('media/' . $company_data->company_footer) : base_url('images/background/5.jpg') ?>);">
     	<div class="auto-container">
         	<!--Widgets Section-->
             <div class="widgets-section">
@@ -482,18 +1509,19 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 						<div class="footer-widget logo-widget">
 							<div class="widget-content">
 								<div class="logo">
-									<a href="index.html"><img src="https://via.placeholder.com/220x86" alt="" /></a>
+									<a href="<?php echo base_url() ?>">
+                                    <img loading="lazy" src="<?php echo $company_data->media_id ? base_url('media/' . $company_data->media_name) : base_url('images/logo-2.png') ?>" alt="">
+                                    </a>
 								</div>
 								<div class="text">
-									<p>Manzil is an exclusive multi-purpose 100% responsive Template Theme with powerful features.</p>
-									<p>Simple and well-structured coding, high quality and flexible layout, scalable features along with color schemes to create tailor-cut websites.</p>
+									<p><?php echo $company_data->company_description ?></p>
 								</div>
 								<!-- Social Box -->
 								<ul class="social-box">
-									<li><a href="#" class="fa fa-facebook-f"></a></li>
-									<li><a href="#" class="fa fa-linkedin"></a></li>
-									<li><a href="#" class="fa fa-twitter"></a></li>
-									<li><a href="#" class="fa fa-google"></a></li>
+									<li><a href="<?= $company_data->company_facebook ? $company_data->company_facebook : '#' ?>" target="_blank" class="fa fa-facebook-f"></a></li>
+									<li><a href="<?= $company_data->company_youtube ? $company_data->company_youtube : '#' ?>" target="_blank" class="fa fa-youtube"></a></li>
+									<li><a href="<?= $company_data->company_youtube ? $company_data->company_instagram : '#' ?>" target="_blank" class="fa fa-instagram"></a></li>
+									<li><a href=""<?= $company_data->company_whatsapp ? 'https://api.whatsapp.com/send?phone=62' . str_replace(' ', '', $company_data->company_whatsapp) : '#' ?>" class="fa fa-whatsapp"></a></li>
 								</ul>
 							</div>
 						</div>
@@ -507,24 +1535,13 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 								<!-- Column -->
 								<div class="column col-lg-6 col-sm-6 col-sm-12">
 									<ul class="list-link">
-										<li><a href="index.html">Home</a></li>
-										<li><a href="services.html">Services</a></li>
-										<li><a href="about.html">About us</a></li>
-										<li><a href="testimonial.html">Testimonials</a></li>
-										<li><a href="blog.html">News</a></li>
-										<li><a href="projects.html">Portfolio</a></li>
+										  <li><a href="<?= base_url('about-us') ?>">About</a></li>
+                                            <li><a href="<?= base_url('services') ?>">Services</a></li>
+                                            <li><a href="<?= base_url('projects') ?>">Project</a></li>
+                                            <li><a href="<?= base_url('blog') ?>">Blog</a></li>
+                                            <li><a href="<?= base_url('contact') ?>">Contact Us</a></li>
 									</ul>
 								</div>
-								<!-- Column -->
-								<div class="column col-lg-6 col-sm-6 col-sm-12">
-									<ul class="list-link">
-										<li><a href="team.html">Team</a></li>
-										<li><a href="faq.html">FAQ</a></li>
-										<li><a href="projects.html">Gallery</a></li>
-										<li><a href="contact.html">Contact</a></li>
-									</ul>
-								</div>
-								
 							</div>
 							
 						</div>
@@ -564,17 +1581,10 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 				<div class="row clearfix">
 					<!-- Column -->
 					<div class="column col-lg-6 col-md-12 col-sm-12">
-						<div class="copyright">&copy; All rights reserved by <a href="https://themeforest.net/user/themeexpo">themeexpo</a></div>
+						<div class="copyright">&copy; All rights reserved by <a href="https://bintorocorp.co.id">Bintorocorp.</a></div>
 					</div>
 					<!-- Column -->
-					<div class="column col-lg-6 col-md-12 col-sm-12">
-						<ul class="footer-nav">
-							<li><a href="terms.html">Terms</a></li>
-							<li><a href="privacy.html">Privacy & Policy</a></li>
-							<li><a href="register.html">Join Us</a></li>
-							<li><a href="contact.html">Need Help?</a></li>
-						</ul>
-					</div>
+
 				</div>
 			</div>
 		</div>
