@@ -29,6 +29,7 @@ class Template extends BaseController {
         $data['team'] = $model->getTeam();
         $data['seo'] = $model->getAboutSeo();
         $data['client_logo'] = $model->getClientLogos();
+        $data['faqs'] = $model->getFaqHome();
         return view('template/about', $data);
     }
 
@@ -46,6 +47,7 @@ class Template extends BaseController {
         $data['team'] = $model->getTeamPage();
         // $data['teams'] = $model->getAllTeam();
         $data['team_category'] = $model->getTeamCategory();
+        $data['about'] = $model->getAboutPage();
         return view('template/team', $data);
     }
 
@@ -55,6 +57,7 @@ class Template extends BaseController {
         $data['service'] = $model->getServicePage();
         $data['jasa'] = $model->getjasa();
         $data['slider'] = $model->getServiceSlider();
+        $data['about'] = $model->getAboutPage();
         return view('template/services', $data);
     }
 

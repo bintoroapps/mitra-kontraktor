@@ -1,294 +1,410 @@
 <?= $this->extend('template/main') ?>
 
 <?= $this->section('content') ?>
-<!--Page Title-->
-<section class="page-title" style="background-image:url(<?= $about->about_page_1_img ? base_url('media/' . $about->about_page_1_img) : 'images/background/10.jpg' ?>);">
+
+
+    <!-- Page Title -->
+    <section class="page-title" style="background-image:url(<?= $about->about_page_1_img ? base_url('media/' . $about->about_page_1_img) : 'images/background/10.jpg' ?>);">
         <div class="auto-container">
-            <div class="inner-container clearfix">
-                <div class="title-box">
-                    <h1><?= $about->about_page_1_big_title ?></h1>
-                    <span class="title"><?= $about->about_page_1_small_title ?></span>
-                </div>
-                <ul class="bread-crumb clearfix">
-                    <li><a href="<?= $about->about_page_1_bread_link ?>"><?= $about->about_page_1_bread_1 ?></a></li>
-                    <li><?= $about->about_page_1_bread_2 ?></li>
-                </ul>
-            </div>
+            <h1><?= $about->about_page_1_big_title ?></h1>
+            <ul class="page-breadcrumb">
+                <li><a href="index.html"><?= $about->about_page_1_bread_1 ?></a></li>
+                <li><?= $about->about_page_1_bread_2 ?></li>
+            </ul>
         </div>
     </section>
-    <!--End Page Title-->
+    <!-- End Page Title -->
 
-    <!-- About Section -->
-    <section class="about-section" style="background-image: url(images/background/1.jpg);">
+    <!-- About Section Two -->
+    <section class="about-section-two style-two">
+        <div class="pattern-layer" style="background-image:url(images/background/pattern-2.png)"></div>
+        <div class="image-layer" style="background-image: url(<?= $about->about_page_3_img ? base_url('media/' . $about->about_page_3_img) : 'images/background/3.jpg' ?>);"></div>
         <div class="auto-container">
-            <div class="row no-gutters">
-                <!-- Image Column -->
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="title-box wow fadeInLeft" data-wow-delay='1200ms'>
-                            <h2><?= $about->about_page_2_big_title ?></h2>
-                        </div>
-                        <div class="image-box wow fadeInRight" data-wow-delay='600ms'>
-                            <figure class="alphabet-img"><img  loading="lazy" src="<?= $about->about_page_2_img_1 ? base_url('media/' .$about->about_page_2_img_1) : 'images/resource/alphabet-image.png' ?>" alt="<?= $about->about_page_2_img_1_alt ?>"></figure>
-                            <figure class="image"><img  loading="lazy" src="<?= $about->about_page_2_img_2 ? base_url('media/' . $about->about_page_2_img_2) : 'images/resource/image-1.jpg' ?>" alt="<?= $about->about_page_2_img_2_alt ?>"></figure>
-                        </div>
+            <!-- Sec Title -->
+            <div class="sec-title centered">
+                <div class="title">
+                    <!-- Title Effect -->
+                    <div class="title-effect">
+                        <div class="bar bar-top"></div>
+                        <div class="bar bar-right"></div>
+                        <div class="bar bar-bottom"></div>
+                        <div class="bar bar-left"></div>
                     </div>
+                    <?= $about->about_page_2_big_title ?>
                 </div>
-
-                <!-- Content Column -->
-                <div class="content-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column wow fadeInLeft">
-                        <div class="content-box">
-                            <div class="title">
-                                <h2><?= $about->about_page_2_small_title ?></h2>
-                            </div>
-                            <div class="text"><?= $about->about_page_2_desc ?></div>
-                            <div class="link-box"><a href="<?= $about->about_page_2_btn_link ?>" class="theme-btn btn-style-one"><?= $about->about_page_2_btn_text ?></a></div>
-                        </div>
-                    </div>
-                </div>
+                <h2><?= $about->about_page_2_small_title ?></h2>
             </div>
-        </div>
-    </section>
-    <!--End About Section -->
-
-    <!-- Fun Fact And Features -->
-    <section class="fun-fact-and-features alternate"  style="background-image: url(<?= $about->about_page_3_img ? base_url('media/' . $about->about_page_3_img) : 'images/background/3.jpg' ?>);">
-        <div class="outer-box">
-            <div class="auto-container">
-                <!-- Fact Counter -->
-                <div class="fact-counter">
-                    <div class="row">
-                        <!--Column-->
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="<?= $about->about_page_3_num_1 ?>">0</span></div>
-                                <h4 class="counter-title"><?= $about->about_page_3_text_1 ?></h4>
-                            </div>
-                        </div>
-
-                        <!--Column-->
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="<?= $about->about_page_3_num_2 ?>">0</span></div>
-                                <h4 class="counter-title"><?= $about->about_page_3_text_2 ?></h4>
-                            </div>
-                        </div>
-
-                        <!--Column-->
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="800ms">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="<?= $about->about_page_3_num_3 ?>">0</span></div>
-                                <h4 class="counter-title"><?= $about->about_page_3_text_3 ?></h4>
-                            </div>
-                        </div>
-
-                        <!--Column-->
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="1200ms">
-                            <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="<?= $about->about_page_3_num_4 ?>">0</span></div>
-                                <h4 class="counter-title"><?= $about->about_page_3_text_4 ?></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Features -->
-                <div class="features">
-                    <div class="row">
-                        <!-- Feature Block -->
-                        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="icon-box"><span class="icon flaticon-decorating"></span></div>
-                                <h3><a href="#"><?= $about->about_page_3_pros_1_title ?></a></h3>
-                                <div class="text"><?= $about->about_page_3_pros_1_desc ?></div>
-                                <!-- <div class="link-box"><a href="service-detail.html">Read More</a></div> -->
-                            </div>
-                        </div>
-
-                        <!-- Feature Block -->
-                        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="icon-box"><span class="icon flaticon-plan"></span></div>
-                                <h3><a href="#"><?= $about->about_page_3_pros_2_title ?></a></h3>
-                                <div class="text"><?= $about->about_page_3_pros_2_desc ?></div>
-                                <!-- <div class="link-box"><a href="service-detail.html">Read More</a></div> -->
-                            </div>
-                        </div>
-
-                        <!-- Feature Block -->
-                        <div class="feature-block col-lg-4 col-md-6 col-sm-12">
-                            <div class="inner-box">
-                                <div class="icon-box"><span class="icon flaticon-sketch-3"></span></div>
-                                <h3><a href="#"><?= $about->about_page_3_pros_3_title ?></a></h3>
-                                <div class="text"><?= $about->about_page_3_pros_3_desc ?></div>
-                                <!-- <div class="link-box"><a href="service-detail.html">Read More</a></div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Fun Fact Section -->
-
-    <!-- Testimonial Section Two-->
-    <section class="testimonial-section-two">
-        <div class="auto-container">
-            <div class="sec-title">
-                <span class="float-text"><?= $about->about_page_4_big_title ?></span>
-                <h2><?= $about->about_page_4_small_title ?></h2>
-            </div>
-
-            <div class="testimonial-carousel-two owl-carousel owl-theme">
-                <!-- Testimonial block two -->
-                <?php 
-                    if(isset($testimonials)):
-                        foreach($testimonials as $t): 
-                ?>
-                <div class="testimonial-block-two">
-                    <div class="inner-box">
-                        <div class="text"><?= $t->portfolio_testimonial ?></div>
-                        <div class="info-box">
-                            <div class="thumb"><img  loading="lazy" src="<?= $t->portfolio_client_photo ? base_url('media/' . $t->portfolio_client_photo) : 'images/resource/thumb-2.jpg' ?>" alt="<?= $t->portfolio_client_photo_alt ?>"></div>
-                            <h5 class="name"><?= $t->portfolio_client ?></h5>
-                            <span class="date"><?= \App\Controllers\Template::bulan(date('m', strtotime($t->portfolio_created)))  ?> <?= date('d - Y', strtotime($t->portfolio_created)) ?></span>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                        endforeach; 
-                    endif; 
-                ?>
-            </div>
-        </div>
-    </section>
-    <!--End Testimonial Section Two-->
-
-    <!--Clients Section-->
-    <section class="clients-section style-two">
-        <div class="auto-container">
-            <div class="sponsors-outer">
-                <!--Sponsors Carousel-->
-                <ul class="sponsors-carousel owl-carousel owl-theme">
-                    <?php 
-                        if(isset($client_logo)):
-                            foreach($client_logo as $c): 
-                    ?>
-                    <li class="slide-item"><figure class="image-box"><a href="<?= base_url('projects/' . $porfolio_slug) ?>"><img  loading="lazy" src="<?= $c->portfolio_client_logo ? base_url('media/' .$c->portfolio_client_logo) : 'images/clients/1.png' ?>" alt="<?= $c->portfolio_client_logo_alt ?>"></a></figure></li>
-                    <?php
-                            endforeach; 
-                        endif; 
-                    ?>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--End Clients Section-->
-
-     <!-- Process Section -->
-    <section class="process-section" style="background-image: url(<?= $about->about_page_6_img ? base_url('media/' . $about->about_page_6_img) : 'images/background/8.jpg' ?>);">
-        <div class="auto-container">
-            <div class="sec-title light">
-                <span class="float-text"><?= $about->about_page_6_big_title ?></span>
-                <h2><?= $about->about_page_6_small_title ?></h2>
-            </div>
-            <div class="row">
-                <!-- Process Block -->
-                <div class="process-block col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <span class="count">01</span>
-                        <h4><a href="#"><?= $about->about_page_6_title_1 ?></a></h4>
-                        <div class="text"><?= $about->about_page_6_desc_1 ?></div>
-                        <!-- <div class="link-box"><a href="service-detail.html">Read More</a></div> -->
-                    </div>
-                </div>
-                <div class="process-block col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <span class="count">02</span>
-                        <h4><a href="#"><?= $about->about_page_6_title_2 ?></a></h4>
-                        <div class="text"><?= $about->about_page_6_desc_2 ?></div>
-                        <!-- <div class="link-box"><a href="service-detail.html">Read More</a></div> -->
-                    </div>
-                </div>
-                <div class="process-block col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <span class="count">03</span>
-                        <h4><a href="#"><?= $about->about_page_6_title_3 ?></a></h4>
-                        <div class="text"><?= $about->about_page_6_desc_3 ?></div>
-                        <!-- <div class="link-box"><a href="service-detail.html">Read More</a></div> -->
-                    </div>
-                </div>
-                <div class="process-block col-lg-3 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <span class="count">04</span>
-                        <h4><a href="#"><?= $about->about_page_6_title_4 ?></a></h4>
-                        <div class="text"><?= $about->about_page_6_desc_4 ?>></div>
-                        <!-- <div class="link-box"><a href="service-detail.html">Read More</a></div> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End Process Section -->
-
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="auto-container">
-            <div class="sec-title">
-                <span class="float-text"><?= $about->about_page_7_big_title ?></span>
-                <h2><?= $about->about_page_7_small_title ?></h2>
-            </div>
-
+            
             <div class="row clearfix">
-                <!-- Team Block -->
-                <?php 
-                    if(isset($team)):
-                        foreach($team as $t): 
-                ?>
-                <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="<?= base_url('team') ?>"><img  loading="lazy" src="<?= $t->team_image ? base_url('media/' . $t->team_image) : 'images/resource/team-1.jpg' ?>" alt="<?= $t->team_image_alt ?>"></a></div>
-                            <ul class="social-links">
-                                <li><a href="<?= $t->team_facebook ? $t->team_facebook : '#' ?>"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="<?= $t->team_twitter ? $t->team_twitter : '#' ?>"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="<?= $t->team_google_plus ? $t->team_google_plus : '#' ?>"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="<?= $t->team_instagram ? $t->team_instagram : '#' ?>"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="<?= $t->team_whatsapp ? $t->team_whatsapp : '#' ?>"><i class="fa fa-whatsapp"></i></a></li>
-                            </ul>
-                            <h3 class="name"><a href="<?= base_url('team') ?>"><?= $t->team_name ?></a></h3>
-                        </div>
-                        <span class="designation"><?= $t->team_role ?></span>
+                
+                <!-- Content Column -->
+                <div class="content-column col-lg-4 col-md-12 col-sm-12">
+                    <div class="inner-column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <h3><a href="about.html"><?= $about->about_page_2_small_title ?></a></h3>
+                        <div class="text"><?= $about->about_page_2_desc ?></div>
+                        <a href="<?= $about->about_page_2_btn_link ?>" class="read-more theme-btn"><?= $about->about_page_2_btn_text ?></a>
                     </div>
                 </div>
-                <?php
-                        endforeach; 
-                    endif; 
-                ?>
+                
+                <!-- Image Column -->
+                <div class="image-column col-lg-8 col-md-12 col-sm-12">
+                    <div class="inner-column wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <img src="<?= $about->about_page_2_img_1 ? base_url('media/' .$about->about_page_2_img_1) : 'images/resource/alphabet-image.png' ?>" alt="<?= $about->about_page_2_img_1_alt ?>" />
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
 
+<!-- Counter Section -->
+    <section class="counter-section alternate">
+        <div class="auto-container">
+            
+            <!-- Fact Counter -->
+            <div class="fact-counter style-two">
+                <div class="row clearfix">
+
+                    <!-- Column -->
+                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon"><img src="images/icons/counter-1.png" alt="" /></div>
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="3500" data-stop="<?= $about->about_page_3_num_1 ?>">0</span>+
+                                </div>
+                                <div class="counter-title"><?= $about->about_page_3_text_1 ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Column -->
+                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon"><img src="images/icons/counter-2.png" alt="" /></div>
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="2500" data-stop="<?= $about->about_page_3_num_2 ?>">0</span>+
+                                </div>
+                                <div class="counter-title"><?= $about->about_page_3_text_2 ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Column -->
+                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon"><img src="images/icons/counter-3.png" alt="" /></div>
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="3000" data-stop="<?= $about->about_page_3_num_3 ?>">0</span>+
+                                </div>
+                                <div class="counter-title"><?= $about->about_page_3_text_3 ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Column -->
+                    <div class="column counter-column col-lg-3 col-md-6 col-sm-12">
+                        <div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="content">
+                                <div class="icon"><img src="images/icons/counter-4.png" alt="" /></div>
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="3000" data-stop="<?= $about->about_page_3_num_4 ?>">0</span>+
+                                </div>
+                                <div class="counter-title"><?= $about->about_page_3_text_4 ?></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- End Counter Section -->
+
+        <!-- Call To Action Section -->
+    <section class="call-to-action-section style-two">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="image-layer wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms" style="background-image:url(<?= $about->about_page_1_img ? base_url('media/' . $about->about_page_1_img) : 'images/background/10.jpg' ?>);"></div>
+                <div class="row clearfix">
+                    
+                    <!-- Column -->
+                    <div class="column col-lg-6 col-md-12 col-sm-12">
+                        <h4>Looking For Best Partner <br> For Your Next Construction Works?</h4>
+                    </div>
+                    <!-- Column -->
+                    <div class="column col-lg-6 col-md-12 col-sm-12">
+                        <a href="/about" class="theme-btn btn-style-three"><span class="txt">More About</span></a>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </section>
-    <!--End Team Section -->
-
-    <!-- Offer Section -->
-    <section class="offer-section" style="background-image: url(<?= $about->about_page_8_img ? base_url('media/' . $about->about_page_8_img) : 'images/background/6.jpg' ?>);">
+    <!-- End Call To Action Section -->
+    
+    <!-- Reason Section -->
+    <section class="reason-section style-two">
         <div class="auto-container">
-            <div class="row">
-                <div class="content-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <span class="title"><?= $about->about_page_8_small_title ?></span>
-                        <h2><?= $about->about_page_8_big_title ?></h2>
-                        <span class="discount"><?= $about->about_page_8_num ?></span>
-                        <div class="text"><?= $about->about_page_8_desc ?></div>
+            <div class="row clearfix">
+                <!-- Image Column -->
+                <div class="image-column col-lg-7 col-md-12 col-sm-12">
+                    <div class="inner-column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <img src="<?= $about->about_page_2_img_1 ? base_url('media/' .$about->about_page_2_img_1) : 'images/resource/alphabet-image.png' ?>" alt="" />
+                        </div>
+                        <div class="image-text">
+                            <div class="text"><?= $about->about_page_6_small_title ?></div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="form-column order-last col-lg-6 col-md-12 col-sm-12">
+                <!-- Content Column -->
+                <div class="content-column col-lg-5 col-md-12 col-sm-12">
                     <div class="inner-column">
-                        <div class="discount-form">
-                            <!--Comment Form-->
+                        <!-- Sec Title -->
+                        <div class="sec-title">
+                            <div class="title">
+                                <!-- Title Effect -->
+                                <div class="title-effect">
+                                    <div class="bar bar-top"></div>
+                                    <div class="bar bar-right"></div>
+                                    <div class="bar bar-bottom"></div>
+                                    <div class="bar bar-left"></div>
+                                </div>
+                                <?= $about->about_page_6_big_title ?>
+                            </div>
+                            <h2><?= $about->about_page_6_small_title ?></h2>
+                        </div>
+
+                        <div class="row clearfix">
+                            <div class="column col-lg-6 col-md-6 col-sm-12">
+                                <ul class="list-style-one">
+                                    <li><?= $about->about_page_6_title_1 ?></li>
+                                    <li><?= $about->about_page_6_title_2 ?></li>
+                                    <li><?= $about->about_page_6_title_3 ?></li>
+                                </ul>
+                            </div>
+                            <div class="column col-lg-6 col-md-6 col-sm-12">
+                                <ul class="list-style-one">
+                                    <li><?= $about->about_page_6_title_4 ?></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Reason Section -->
+    
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="image-layer" style="background-image:url(https://via.placeholder.com/1143x700)"></div>
+        <div class="pattern-layer" style="background-image:url(images/background/pattern-3.jpg)"></div>
+        <div class="side-image-layer" style="background-image:url(<?= $about->about_page_1_img ? base_url('media/' . $about->about_page_1_img) : 'images/background/10.jpg' ?>);"></div>
+        <div class="auto-container">
+            
+            <div class="inner-container">
+                
+                <!-- Fact Counter -->
+                <div class="fact-counter style-two">
+                    <div class="clearfix">
+
+                        <!-- Column -->
+                        <div class="column counter-column">
+                            <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="content">
+                                    <div class="icon"><img src="images/icons/counter-1.png" alt="" /></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="3500" data-stop="<?= $about->about_page_3_num_1 ?>">0</span>+
+                                    </div>
+                                    <div class="counter-title"><?= $about->about_page_3_text_1 ?></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column -->
+                        <div class="column counter-column">
+                            <div class="inner wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                                <div class="content">
+                                    <div class="icon"><img src="images/icons/counter-2.png" alt="" /></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="2500" data-stop="<?= $about->about_page_3_num_2 ?>">0</span>+
+                                    </div>
+                                    <div class="counter-title"><?= $about->about_page_3_text_2 ?></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column -->
+                        <div class="column counter-column">
+                            <div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                <div class="content">
+                                    <div class="icon"><img src="images/icons/counter-3.png" alt="" /></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="3000" data-stop="<?= $about->about_page_3_num_3 ?>">0</span>+
+                                    </div>
+                                    <div class="counter-title"><?= $about->about_page_3_text_3 ?></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Column -->
+                        <div class="column counter-column">
+                            <div class="inner wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                                <div class="content">
+                                    <div class="icon"><img src="images/icons/counter-4.png" alt="" /></div>
+                                    <div class="count-outer count-box">
+                                        <span class="count-text" data-speed="3000" data-stop="<?= $about->about_page_3_num_4 ?>">0</span>+
+                                    </div>
+                                    <div class="counter-title"><?= $about->about_page_3_text_4 ?></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Video Box -->
+                <div class="video-box">
+                    <div class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <img src="<?= $about->about_page_9_img_1 ? base_url('media/' . $about->about_page_9_img_1) : 'images/resource/video-img.jpg' ?>" alt="<?= $about->about_page_9_img_1_alt ?>" />
+                        <div class="overlay-box">
+                            <div class="content">
+                                <div class="play-box">
+                                    <a href="<?= $about->about_page_9_video ? $about->about_page_9_video : '#' ?>" class="lightbox-image play-btn"><span class="fa fa-play"><i class="ripple"></i></span></a>
+                                    <?= $about->about_page_9_big_title ?>
+                                </div>
+                                <h2><?= $about->about_page_9_small_title ?></h2>
+                                <div class="text"><?= $about->about_page_9_desc ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- End Video Section -->
+    
+    <!-- Skill Section -->
+    <section class="skill-section style-two" style="background-image:url(images/background/2.jpg)">
+        <div class="image-layer" style="background-image:url(images/background/pattern-2.png)"></div>
+        <div class="auto-container">
+            <!-- Sec Title -->
+            <div class="sec-title centered">
+                <div class="title">
+                    <!-- Title Effect -->
+                    <div class="title-effect">
+                        <div class="bar bar-top"></div>
+                        <div class="bar bar-right"></div>
+                        <div class="bar bar-bottom"></div>
+                        <div class="bar bar-left"></div>
+                    </div>
+                    Our Skills
+                </div>
+                <h2>We are giving you a chance <br> to build your dream</h2>
+            </div>
+            <div class="row clearfix">
+                
+                <!-- Skill Column -->
+                <div class="skill-column col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        
+                        <div class="skill-block">
+                            <div class="bar-item">
+                                <div class="skill-title">General Consulting</div>
+                                <div class="skill-bar">
+                                    <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="99">0</span>%</div></div>
+                                    <div class="bar-inner"><div class="bar progress-line" data-height="99"></div></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="skill-title">Construction Management</div>
+                                <div class="skill-bar">
+                                    <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="99">0</span>%</div></div>
+                                    <div class="bar-inner"><div class="bar progress-line" data-height="99"></div></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="skill-title">Design & Build</div>
+                                <div class="skill-bar">
+                                    <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="60">0</span>%</div></div>
+                                    <div class="bar-inner"><div class="bar progress-line" data-height="60"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <!-- Image Column -->
+                <div class="image-column col-lg-4 col-md-12 col-sm-12">
+                    <div class="inner-column wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="image">
+                            <img src="images/resource/accordian.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Skill Column -->
+                <div class="skill-column right-column col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-column wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        
+                        <div class="skill-block">
+                            <div class="bar-item">
+                                <div class="skill-title">General Consulting</div>
+                                <div class="skill-bar">
+                                    <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="65">0</span>%</div></div>
+                                    <div class="bar-inner"><div class="bar progress-line" data-height="65"></div></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="skill-title">Construction Management</div>
+                                <div class="skill-bar">
+                                    <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="75">0</span>%</div></div>
+                                    <div class="bar-inner"><div class="bar progress-line" data-height="75"></div></div>
+                                </div>
+                            </div>
+                            <div class="bar-item">
+                                <div class="skill-title">Design & Build</div>
+                                <div class="skill-bar">
+                                    <div class="skill-percentage"><div class="count-box"><span class="count-text" data-speed="2000" data-stop="90">0</span>%</div></div>
+                                    <div class="bar-inner"><div class="bar progress-line" data-height="90"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Skill Section -->
+    
+    <!-- Request Quote Section -->
+    <section class="request-quote-section">
+        <div class="image-layer" style="background-image: url(<?= $about->about_page_8_img ? base_url('media/' . $about->about_page_8_img) : 'images/background/6.jpg' ?>);"></div>
+        <div class="auto-container">
+            <div class="inner-container" style="background-image:url(images/background/pattern-5.png)">
+                <div class="row clearfix">
+                    
+                    <!-- Form Column -->
+                    <div class="form-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <div class="title-box">
+                                <h2><?= $about->about_page_8_big_title ?></h2>
+                                <span class="title"><?= $about->about_page_8_small_title ?></span>
+                                <span class="discount"><?= $about->about_page_8_num ?></span>
+                                <div class="text"><?= $about->about_page_8_desc ?></div>
+                            </div>
                             <style>
                                 input[type="number"] {
                                     position: relative;
@@ -310,69 +426,184 @@
                                     transition: all 300ms ease;
                                 }
                             </style>
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <input type="text" name="nama" placeholder="Nama" required>
+                            
+                            <!-- Default Form -->
+                            <div class="default-form">
+                                
+                                    <div class="form-group">
+                                        <input type="text" name="nama" value="" placeholder="Name" required>
                                     </div>
-
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <input type="email" name="email" placeholder="Email" required>
+                                    
+                                    <div class="form-group">
+                                        <input type="email" name="email" value="" placeholder="Email" required>
+                                    </div>                                    
+                                    <div class="form-group">
+                                        <input type="number" name="telp" value="" placeholder="Phone Number" required>
                                     </div>
-
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <input type="number" name="telp" placeholder="No. Telp" required>
+                                    
+                                    <div class="form-group">
+                                        <input type="text" name="subject" value="" placeholder="Subject" required>
                                     </div>
-
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                        <textarea name="pesan" placeholder="Pesan"></textarea>
+                                    
+                                    <div class="form-group">
+                                        <textarea name="pesan" placeholder="Your Massage"></textarea>
                                     </div>
-
-                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group text-center">
-                                        <button type="button" class="theme-btn btn-style-one btn-send-form" name="submit-form"><?= $about->about_page_8_btn ?></button>
+                                    
+                                    <div class="form-group text-center">
+                                        <button type="submit" class="theme-btn btn-style-four"><span class="txt"><?= $about->about_page_8_btn ?></span></button>
+                                    </div>
+                                
+                            </div>
+                            <!--End Default Form-->
+                            
+                        </div>
+                    </div>
+                    
+                    <!-- Image Column -->
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="image">
+                                <img src="<?= $about->about_page_2_img_1 ? base_url('media/' .$about->about_page_2_img_1) : 'images/resource/alphabet-image.png' ?>" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="three-item-carousel owl-carousel owl-theme">
+            
+            </div>
+        </div>
+    </section>
+    <!-- End Request Quote Section -->
+    
+    <!-- Default Section -->
+    <section class="default-section style-two">
+        <div class="auto-container">
+            <div class="row clearfix">
+                
+                <!-- Testimonial Column -->
+                <div class="testimonial-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <!-- Sec Title -->
+                        <div class="sec-title">
+                            <div class="title">
+                                <!-- Title Effect -->
+                                <div class="title-effect">
+                                    <div class="bar bar-top"></div>
+                                    <div class="bar bar-right"></div>
+                                    <div class="bar bar-bottom"></div>
+                                    <div class="bar bar-left"></div>
+                                </div>
+                                <?= $about->about_page_4_big_title ?>
+                            </div>
+                            <h2><?= $about->about_page_4_small_title ?></h2>
+                        </div>
+                        <div class="carousel-outer">
+                            <div class="single-item-carousel owl-carousel owl-theme">
+                                 <?php 
+                                    if(isset($testimonials)):
+                                    foreach($testimonials as $t): 
+                                    ?>
+                                <!-- Testimonial Block Two -->
+                                <div class="testimonial-block-two">
+                                    <div class="inner-box">
+                                        <div class="author-image">
+                                            <img src="<?= $t->portfolio_client_photo ? base_url('media/' . $t->portfolio_client_photo) : 'images/resource/thumb-2.jpg' ?>" alt="<?= $t->portfolio_client_photo_alt ?>" />
+                                        </div>
+                                        <div class="rating">
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                            <span class="fa fa-star"></span>
+                                        </div>
+                                        <div class="text"><?= $t->portfolio_testimonial ?></div>
+                                        <h6><?= $t->portfolio_client ?></h6>
+                                        <div class="quote-icon flaticon-quote-4"></div>
                                     </div>
                                 </div>
+                             <?php
+                                    endforeach; 
+                                    endif; 
+                                ?>
+                                
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
+                
+                <!-- Accordian Column -->
+                <div class="accordian-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="inner-column">
+                        <!-- Sec Title -->
+
+
+                        <div class="sec-title">
+                            <div class="title">
+                                <!-- Title Effect -->
+                                <div class="title-effect">
+                                    <div class="bar bar-top"></div>
+                                    <div class="bar bar-right"></div>
+                                    <div class="bar bar-bottom"></div>
+                                    <div class="bar bar-left"></div>
+                                </div>
+                                Question & Answer
+                            </div>
+                            <h2>Get Some Frequently <br> Asked Question</h2>
+                        </div>
+                        
+                        <ul class="accordion-box">
+                            <!--Block-->
+                             <?php 
+                                if(isset($faqs)):
+                                    foreach($faqs as $f): 
+                            ?>
+                            <li class="accordion block">
+                                <div class="acc-btn"><?= $f->faq_home_question ?> <div class="icon fa fa-angle-right"></div></div>
+                                <div class="acc-content">
+                                    <div class="content">
+                                        <div class="text"><?= $f->faq_home_answer ?></div>
+                                    </div>
+                                </div>
+                            </li>
+                             <?php
+                                    endforeach; 
+                                endif; 
+                            ?>
+                        </ul>
+                        
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
-    <!--End Offer Section -->
-
-    <!-- Video Section -->
-    <section class="video-section style-two">
-        <div class="outer-box">
-            <div class="auto-container">
-                <div class="row">
-                    <div class="content-column col-lg-6 col-md-12 col-sm-12">
-                        <div class="inner-column">
-                            <div class="sec-title">
-                                <span class="float-text"><?= $about->about_page_9_big_title ?></span>
-                                <h2><?= $about->about_page_9_med_title ?></h2>
-                            </div>
-                            <span class="title"><?= $about->about_page_9_small_title ?></span>
-                            <div class="text"><?= $about->about_page_9_desc ?></div>
-                        </div>
-                    </div>
-
-                    <!-- Video Column -->
-                    <div class="video-column col-lg-6 col-md-12 col-sm-12">
-                        <div class="inner-column">
-                            <div class="video-box">
-                                 <figure class="image"><img  loading="lazy" src="<?= $about->about_page_9_img_1 ? base_url('media/' . $about->about_page_9_img_1) : 'images/resource/video-img.jpg' ?>" alt="<?= $about->about_page_9_img_1_alt ?>">
-                                    <a href="<?= $about->about_page_9_video ? $about->about_page_9_video : '#' ?>" class="link" data-fancybox="gallery" data-caption=""><span class="icon fa fa-play"></span></a>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- End Default Section -->
+    
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <div class="auto-container">
+            
+            <div class="sponsors-outer">
+                <!-- Sponsors Carousel -->
+                <ul class="sponsors-carousel owl-carousel owl-theme">
+                    <?php  
+                        $recent_post = \App\Controllers\Template::getTwoRecentPost();
+                        foreach($recent_post as $r):
+                    ?>
+                            <li class="slide-item"><figure class="image-box"><a href="<?= base_url($r->blog_slug) ?>"><img src="<?= $r->blog_image ? base_url('media/' . $r->blog_image) : 'images/resource/post-thumb-1.jpg'  ?>" alt="<?= $r->blog_image_alt ?>"></a></figure></li>
+                    <?php endforeach; ?>
+                </ul>
             </div>
+            
         </div>
     </section>
-    <!--End Video Section -->
+    <!-- End Clients Section -->
     <?= $this->endSection() ?>
 
-    <?= $this->section('js') ?>
+     <?= $this->section('js') ?>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script>
     $(document).ready(function() {
