@@ -46,6 +46,8 @@ $routes->get('/blogloadmore', 'Template::blogLoadMore');
 $routes->get('/contact', 'Template::contact');
 $routes->get('/sitemap_index.xml', 'SiteMapController::index');
 
+$routes->get('/team/(:any)', 'Template::teamdetail/$1');
+
 // ------------------ ADMIN ------------------ //
 $routes->match(['get', 'post'], '/admin', 'Auth::index', ['filter' => 'noauth']);
 

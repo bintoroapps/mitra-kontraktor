@@ -99,8 +99,8 @@ $tracking_code = \App\Controllers\Template::trackingCode();
                         <div class="upper-column info-box">
                             <div class="icon-box"><span class="flaticon-world"></span></div>
                             <ul>
-                                <li><strong>Jakarta Selatan</strong></li>
-                                <li>DKI Jakarta, Indonesia</li>
+                                <li><strong>Address</strong></li>
+                                <li><?php echo $company->company_address?></li>
                             </ul>
                         </div>
                         
@@ -109,7 +109,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
                             <div class="icon-box"><span class="flaticon-email-3"></span></div>
                             <ul>
                                 <li><strong>Send Your Mail At</strong></li>
-                                <li><a href="mailto:construction@support.Com">Construction@Support.Com</a></li>
+                                <li><a href="mailto:construction@support.Com"><?php echo $company->company_email?></a></li>
                             </ul>
                         </div>
                         
@@ -118,7 +118,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
                             <div class="icon-box"><span class="flaticon-clock-3"></span></div>
                             <ul>
 								<li><strong>Working Hours</strong></li>
-                                <li>Mon-fri:08.00am To 5.00pm</li>
+                                <li><?php echo $company->company_workinghours?></li>
                             </ul>
                         </div>
                         

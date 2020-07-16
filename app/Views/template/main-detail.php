@@ -25,18 +25,18 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 <title>Mitra Kontraktor</title>
 
 <!-- Stylesheets -->
-<link href="css/bootstrap.css" rel="stylesheet">
+<link href="<?php echo base_url('css/bootstrap.css');?>" rel="stylesheet">
 
-<link href="css/style.css" rel="stylesheet">
-<link href="css/responsive.css" rel="stylesheet">
+<link href="<?php echo base_url('css/style.css');?>" rel="stylesheet">
+<link href="<?php echo base_url('css/responsive.css')?>" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Great+Vibes&family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <!-- Color Switcher Mockup -->
-<link href="css/color-switcher-design.css" rel="stylesheet">
+<link href="<?php echo base_url('css/color-switcher-design.css');?>" rel="stylesheet">
 
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo base_url('images/favicon.png')?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url('images/favicon.png');?>" type="image/x-icon">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -360,20 +360,20 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 <!--Scroll to top-->
 <div class="back-to-top scroll-to-target show-back-to-top" data-target="html">TOP</div>
 
-<script src="js/jquery.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-<script src="js/jquery.fancybox.js"></script>
-<script src="js/appear.js"></script>
-<script src="js/nav-tool.js"></script>
-<script src="js/mixitup.js"></script>
-<script src="js/owl.js"></script>
-<script src="js/wow.js"></script>
-<script src="js/tilt.jquery.min.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/script.js"></script>
-<script src="js/color-settings.js"></script>
+<script src="<?php echo base_url('js/jquery.js')?>"></script>
+<script src="<?php echo base_url('js/popper.min.js');?>"></script>
+<script src="<?php echo base_url('js/bootstrap.min.js')?>"></script>
+<script src="<?php echo base_url('js/jquery.mCustomScrollbar.concat.min.js')?>"></script>
+<script src="<?php echo base_url('js/jquery.fancybox.js');?>"></script>
+<script src="<?php echo base_url('js/appear.js');?>"></script>
+<script src="<?php echo base_url('js/nav-tool.js')?>"></script>
+<script src="<?php echo base_url('js/mixitup.js')?>"></script>
+<script src="<?php echo base_url('js/owl.js')?>"></script>
+<script src="<?php echo base_url('js/wow.js');?>"></script>
+<script src="<?php echo base_url('js/tilt.jquery.min.js')?>"></script>
+<script src="<?php echo base_url('js/jquery-ui.js')?>"></script>
+<script src="<?php echo base_url('js/script.js')?>"></script>
+<script src="<?php echo base_url('js/color-settings.js')?>"></script>
 
 </body>
 </html>

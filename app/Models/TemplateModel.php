@@ -43,6 +43,12 @@ class TemplateModel {
         return $team->get()->getResult();
     }
 
+        public function getTeamMember($slug) {
+        $team = $this->db->table('team');
+        $team->where('team_slug =', $slug);
+        return $team->get()->getResult();
+    }
+
     public function getTestimonial() {
         $testimonial = $this->db->table('testimonial');
         return $testimonial->get()->getResult();
@@ -91,6 +97,11 @@ class TemplateModel {
 
     public function getTeamPage() {
         $team = $this->db->table('team_page');
+        return $team->get()->getFirstRow();
+    }
+
+     public function getTeamdetailPage() {
+        $team = $this->db->table('team_detail_page');
         return $team->get()->getFirstRow();
     }
 

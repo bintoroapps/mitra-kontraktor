@@ -198,12 +198,12 @@
                         </div>
                         
                         <!--Solution Box-->
-                        <div class="solution-box" style="background-image:url(images/resource/solution.jpg)">
+                        <div class="solution-box" style="background-image:url(<?= $blog->blog_page_1_img ? base_url('media/' . $blog->blog_page_1_img) : base_url('images/background/10.jpg') ?>);">
                             <div class="inner">
                                 <div class="title">Quick Contact</div>
                                 <h2>Get Solution</h2>
                                 <div class="text">Contact us at the Constration office nearest to you or submit a business inquiry online.</div>
-                                <a class="solution-btn theme-btn" href="contact.html">Contact Us</a>
+                                <a class="solution-btn theme-btn" href="/contact">Contact Us</a>
                             </div>
                         </div>
                         
@@ -218,17 +218,19 @@
     <!-- Clients Section -->
     <section class="clients-section">
         <div class="auto-container">
+            
             <div class="sponsors-outer">
                 <!-- Sponsors Carousel -->
                 <ul class="sponsors-carousel owl-carousel owl-theme">
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
+                    <?php 
+                        if(isset($client_logo)):
+                            foreach($client_logo as  $c): 
+                    ?>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img  loading="lazy" src="<?=  base_url('media/' . $c->portfolio_client_logo) ?>" alt="<?= $c->portfolio_client_logo_alt ?>"></a></figure></li>
+                    <?php
+                            endforeach; 
+                        endif; 
+                    ?>
                 </ul>
             </div>
             

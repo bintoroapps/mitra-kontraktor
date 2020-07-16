@@ -17,6 +17,7 @@ class Template extends BaseController {
         $data['testimonials'] = $model->getTestimonials();
         $data['client_logo'] = $model->getClientLogos();
         $data['faqs'] = $model->getFaqHome();
+        $data['company'] = $model->getCompany();
         return view('template/home', $data);
     }
 
@@ -30,6 +31,7 @@ class Template extends BaseController {
         $data['seo'] = $model->getAboutSeo();
         $data['client_logo'] = $model->getClientLogos();
         $data['faqs'] = $model->getFaqHome();
+        $data['company'] = $model->getCompany();
         return view('template/about', $data);
     }
 
@@ -38,6 +40,8 @@ class Template extends BaseController {
         $model = new TemplateModel($db);
         $data['faq'] = $model->getFAQPage();
         $data['faqs'] = $model->getFAQ();
+        $data['company'] = $model->getCompany();
+        $data['client_logo'] = $model->getClientLogo();
         return view('template/faq', $data);
     }
 
@@ -48,7 +52,20 @@ class Template extends BaseController {
         // $data['teams'] = $model->getAllTeam();
         $data['team_category'] = $model->getTeamCategory();
         $data['about'] = $model->getAboutPage();
+        $data['company'] = $model->getCompany();
+        $data['client_logo'] = $model->getClientLogo();
         return view('template/team', $data);
+    }
+        public function teamdetail($slug) {
+        $db = db_connect();
+        $model = new TemplateModel($db);
+        $data['team_detail'] = $model->getTeamdetailPage();
+        $data['company'] = $model->getCompany();
+        $data['all_project'] = $model->getAllProject();
+        $data['about'] = $model->getAboutPage();
+        $data['team'] = $model->getTeamMember($slug);
+        $data['client_logo'] = $model->getClientLogo();
+        return view('template/team-detail',$data);  
     }
 
     public function services() {
@@ -58,6 +75,7 @@ class Template extends BaseController {
         $data['jasa'] = $model->getjasa();
         $data['slider'] = $model->getServiceSlider();
         $data['about'] = $model->getAboutPage();
+        $data['company'] = $model->getCompany();
         return view('template/services', $data);
     }
 
@@ -70,6 +88,7 @@ class Template extends BaseController {
         $data['jasa'] = $model->getjasa();
         $data['video'] = $model->getTestimoniVideo($jasa_id);
         $data['price'] = $model->getServicePrice($jasa_id);
+        $data['company'] = $model->getCompany();
         return view('template/services-detail', $data);
     }
 
@@ -80,6 +99,7 @@ class Template extends BaseController {
         $data['category'] = $model->getProjectCategory();
         $data['all_project'] = $model->getAllProject();
         $data['count_project'] = $model->getCountProject();
+        $data['company'] = $model->getCompany();
         return view('template/project', $data);
     }
 
@@ -99,6 +119,8 @@ class Template extends BaseController {
         $data['detail'] = $model->getProjectDetailPage();
         $data['header'] = $model->getProjectHeader();
         $data['btn_load'] = $model->checkProjectImage($slug);
+        $data['company'] = $model->getCompany();
+        $data['all_project'] = $model->getAllProject();
         return view('template/project-detail', $data);
     }
 
@@ -119,11 +141,13 @@ class Template extends BaseController {
             $data['blogs'] = $model->getAllBlog();
             $data['count'] = $model->getBlogCount();
         }
-
+        $data['detail'] = $model->getProjectDetailPage();
         $data['blog'] = $model->getBlogPage();
         $data['recent'] = $model->getBlogRecentPost();
         $data['category'] = $model->getBlogCategory();
         $data['tags'] = $model->getBlogTags();
+        $data['client_logo'] = $model->getClientLogo();
+        $data['company'] = $model->getCompany();
         return view('template/blog', $data);
     }
     
@@ -138,6 +162,7 @@ class Template extends BaseController {
             $data['category'] = $model->getBlogCategory();
             $data['tags'] = $model->getBlogTags();
             $data['comment'] = $model->getBlogComment($data['content']->blog_id);
+            $data['company'] = $model->getCompany();
             return view('template/blog-detail', $data);
         } else {
             $data['portfolio'] = $model->getPortfolio();
@@ -147,6 +172,7 @@ class Template extends BaseController {
             $data['video'] = $model->getTestimoniVideo($jasa_id);
             $data['price'] = $model->getServicePrice($jasa_id);
             $data['faqs'] = $model->getFaqJasa($jasa_id);
+            $data['company'] = $model->getCompany();
             return view('template/services-detail', $data);
         }
 
@@ -169,6 +195,7 @@ class Template extends BaseController {
         $data['client_logo'] = $model->getClientLogo();
         $data['contact'] = $model->getContactPage();
         $data['company'] = $model->getCompany();
+        $data['about'] = $model->getAboutPage();
         return view('template/contact', $data);
     }
 

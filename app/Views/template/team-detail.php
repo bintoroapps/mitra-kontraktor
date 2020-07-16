@@ -1,89 +1,88 @@
-<?= $this->extend('template/main') ?>
+<?php echo  $this->extend('template/main-detail') ?>
 
-<?= $this->section('content') ?>
-<!-- Page Title -->
-    <section class="page-title" style="background-image:url(<?= $team->team_page_1_img ? base_url('media/' . $team->team_page_1_img) : 'images/background/10.jpg' ?>);">
+
+<?php echo  $this->section('content') ?>
+  <!-- Page Title -->
+    <section class="page-title" style="background-image:url(<?php echo $team_detail->title_page_1 ? base_url('media/' . $team_detail->title_page_1) : 'images/background/10.jpg' ?>);">
         <div class="auto-container">
-            <h1><?= $team->team_page_1_big_title ?></h1>
-            <span class="title"><?= $team->team_page_1_small_title ?></span>
-
+            <h1><?php echo $team_detail->header_container_1;?></h1>
             <ul class="page-breadcrumb">
-                <li><a href="<?= $team->team_page_1_bread_link ?>"><?= $team->team_page_1_bread_1 ?></a></li>
-                <li><?= $team->team_page_1_bread_2 ?></li>
+                <li><a href="<?php echo $team_detail->link_breadcumb_1;?>"><?php echo $team_detail->breadcumb_1;?></a></li>
+                <li><?php echo $team_detail->breadcumb_2;?></li>
             </ul>
         </div>
     </section>
     <!-- End Page Title -->
     
-    <!-- Team Page Section -->
-    <section class="team-page-section">
-         <?php 
-            if(isset($team_category)):
-                foreach($team_category as $t): 
-        ?>
-
+    <!-- Team Detail Section -->
+    <section class="team-single-section">
         <div class="auto-container">
-            <!-- Sec Title -->
-            <div class="sec-title centered">
-                <div class="title">
-                    <!-- Title Effect -->
-                    <div class="title-effect">
-                        <div class="bar bar-top"></div>
-                        <div class="bar bar-right"></div>
-                        <div class="bar bar-bottom"></div>
-                        <div class="bar bar-left"></div>
-                    </div>
-                   <?= strtoupper($t->team_category_name) ?>
-                </div>
-                <h2><?= ucwords(strtolower($t->team_category_name)) ?></h2>
-            </div>
             <div class="row clearfix">
-                 <?php 
-                        $teams = \App\Controllers\Template::getTeamByTeamCategoryId($t->team_category_id);
-                            foreach($teams as $t): 
-                    ?>
-                <!-- Team Block -->
-                <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
+                  <?php 
+                        if(isset($team)):
+                        foreach($team as $t): 
+                      ?>
+                <!-- Image Column -->
+                <div class="image-column col-lg-4 col-md-12 col-sm-12">
+                    <div class="inner-column wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                         <div class="image">
-                            <img src="<?= base_url('team/'.$t->team_slug) ?>"><img  loading="lazy" src="<?= $t->team_image ? base_url('media/' . $t->team_image) : 'images/resource/team-1.jpg' ?>" alt="<?= $t->team_name ?>" />
-                            <!-- Social Box -->
-                            <ul class="social-box">
-                                <li><a href="<?= $t->team_facebook ? $t->team_facebook : '#' ?>" class="fa fa-facebook-f"></a></li>
-                                <li><a href="<?= $t->team_twitter ? $t->team_twitter : '#' ?>" class="fa fa-twitter"></a></li>
-                                <li><a href="<?= $t->team_instagram ? $t->team_instagram : '#' ?>" class="fa fa-instagram"></a></li>
-                                <li><a href="<?= $t->team_google_plus ? $t->team_google_plus : '#' ?>" class="fa fa-google-plus"></a></li>
-                            </ul>
-                        </div>
-                        <div class="lower-content">
-                            <h5><a href="<?= base_url('team/'.$t->team_slug) ?>"><?= $t->team_name ?></a></h5>
-                            <div class="designation"><?= $t->team_role ?></div>
-                            <!-- Arrows -->
-                            <a href="<?= base_url('teamdetail/'.$t->team_slug) ?>" class="team-arrows-right">
-                                <div class="chevron"></div>
-                                <div class="chevron"></div>
-                                <div class="chevron"></div>
-                                <div class="chevron"></div>
-                            </a>
-                            
+                            <img src="<?= $t->team_image ? base_url('media/' . $t->team_image) : base_url('images/resource/project-thumb-1.jpg') ?>" alt="<?= $t->team_image ?>" />
                         </div>
                     </div>
                 </div>
                 
-             <?php
-                        endforeach;
-                    ?>
+                <!-- Content Column -->
+                <div class="content-column col-lg-8 col-md-12 col-sm-12">
+
+                    <div class="inner-column">
+                        <h2><?php echo $t->team_name;?> <span class="category"><?php echo $t->team_role?></span></h2>
+                        <ul class="post-meta">
+<!--                             <li><span class="icon flaticon-email-6"></span> <a href="mailto:manzil@gmail.com">manzil@gmail.com</a></li>
+                            <li><span class="icon flaticon-24-hours-phone-service"></span> <a href="tel:000-000-0000">000 - 000 - 0000</a></li>
+                            <li><span class="icon fa fa-whatsapp"></span> <a href="tel:999-999-9999">999 - 999 - 9999</a></li> -->
+                        </ul>
+                        <div class="text">
+                            <p><?php echo $t->team_bio?></p>
+                        </div>
+                        <div class="row clearfix">
+                            <div class="column col-lg-6 col-md-6 col-sm-12">
+                                <ul class="list-style-one">
+                                    <li><?php echo $t->team_expertise_1?></li>
+                                    <li><?php echo $t->team_expertise_2?></li>
+                                    <li><?php echo $t->team_expertise_3?></li>
+                                </ul>
+                            </div>
+                            <div class="column col-lg-6 col-md-6 col-sm-12">
+                                <ul class="list-style-one">
+                                    <li><?php echo $t->team_expertise_4?></li>
+                                    <li><?php echo $t->team_expertise_5?></li>
+                                    <li><?php echo $t->team_expertise_6?></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Social Box -->
+                        <ul class="social-icon-one">
+                            <li><a href="<?= $t->team_facebook ? $t->team_facebook : '#' ?>" class="fa fa-facebook-f"></a></li>
+                            <li><a href="<?= $t->team_twitter ? $t->team_twitter : '#' ?>" class="fa fa-twitter"></a></li>
+                            <li><a href="<?= $t->team_instagram ? $t->team_instagram : '#' ?>" class="fa fa-twitter"></a></li>
+                            <li><a href="<?= $t->team_google_plus ? $t->team_google_plus : '#' ?>" class="fa fa-google-plus"></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                
             </div>
+                      <?php
+                        endforeach; 
+                        endif; 
+                      ?>
         </div>
-                <?php
-                endforeach; 
-            endif; 
-        ?>
     </section>
+    <!-- End Team Detail Section -->
             
     <!-- Request Quote Section Two -->
     <section class="request-quote-section-two">
-        <div class="image-layer" style="background-image:url(<?= $team->team_page_1_img ? base_url('media/' . $team->team_page_1_img) : 'images/background/10.jpg' ?>);"></div>
+        <div class="image-layer" style="background-image:url(<?php echo $team_detail->title_page_1 ? base_url('media/' . $team_detail->title_page_1) : 'images/background/10.jpg' ?>);"></div>
         <div class="auto-container">
             <div class="content-box">
                 <div class="play-box">
@@ -95,20 +94,41 @@
             </div>
             <!-- Side Image -->
             <div class="side-image wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
-                <!-- <img src="<?= $about->about_page_9_img_1 ? base_url('media/' . $about->about_page_9_img_1) : 'images/resource/video-img.jpg' ?>" alt="<?= $about->about_page_9_img_1_alt ?>" /> -->
+                <img src="images/resource/quote-1.png" alt="" />
             </div>
             <!-- Inner Container -->
             <div class="inner-container" style="background-image:url(images/background/pattern-5.png)">
                 <!-- Title Box -->
                 <div class="title-box">
                     <h2><?= $about->about_page_8_big_title ?></h2>
-                    <div class="text"><?= $about->about_page_8_desc ?></div>
+                    <div class="text"><?= $about->about_page_8_small_title ?></div>
                 </div>
                 
                 <!-- Default Form -->
                 <div class="default-form">
+                    <form method="post" action="blog.html">
                         <div class="row clearfix">
-                        
+                                                        <style>
+                                input[type="number"] {
+                                    position: relative;
+                                    display: block;
+                                    width: 100%;
+                                    font-size: 14px;
+                                    color: #777777;
+                                    line-height: 30px;
+                                    padding: 14px 25px;
+                                    background-color: #ffffff;
+                                    height: 60px;
+                                    border: 1px solid #bbbbbb;
+                                    font-weight: 400;
+                                    border-radius: 10px;
+                                    -webkit-transition: all 300ms ease;
+                                    -moz-transition: all 300ms ease;
+                                    -ms-transition: all 300ms ease;
+                                    -o-transition: all 300ms ease;
+                                    transition: all 300ms ease;
+                                }
+                            </style>
                             <!-- Column -->
                             <div class="column col-lg-6 col-md-12 col-sm-12">
                                 <!-- Form Group -->
@@ -119,12 +139,9 @@
                                 <div class="form-group">
                                     <input type="email" name="email" value="" placeholder="Email" required>
                                 </div>
-                                <div class="form-group">
-                                    <input type="email" name="telp" value="" placeholder="Phone Number" required>
-                                </div>
                                 
                                 <div class="form-group">
-                                    <input type="text" name="subject" value="" placeholder="Subject" required>
+                                    <input type="number" name="telp" value="" placeholder="Phone Number" required>
                                 </div>
                             </div>
                             
@@ -134,12 +151,13 @@
                                     <textarea name="message" placeholder="Your Massage"></textarea>
                                 </div>
                                 
-                                <div class="form-group">
-                                    <button type="submit" class="theme-btn btn-style-four" name="submit-form"><span class="txt"><?= $about->about_page_8_btn ?></span></button>
-                                </div>
+                                    <div class="form-group text-center">
+                                        <button type="submit" class="theme-btn btn-style-four" name="form-submit"><span class="txt"><?= $about->about_page_8_btn ?></span></button>
+                                    </div>
                             </div>
+                            
                         </div>
-                  
+                    </form>
                 </div>
                 <!--End Default Form-->
                 
@@ -171,10 +189,9 @@
         </div>
     </section>
     <!-- End Clients Section -->
-    <!--End Team Section -->
-<?= $this->endSection() ?>
+<?php echo $this->endSection() ?>
 
-     <?= $this->section('js') ?>
+<?php echo $this->section('js') ?>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
     <script>
     $(document).ready(function() {
@@ -248,4 +265,4 @@
         })
     })
     </script>
-    <?= $this->endSection() ?>
+    <?php echo $this->endSection() ?>

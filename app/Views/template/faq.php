@@ -155,12 +155,15 @@
             <div class="sponsors-outer">
                 <!-- Sponsors Carousel -->
                 <ul class="sponsors-carousel owl-carousel owl-theme">
-                    <?php  
-                        $recent_post = \App\Controllers\Template::getTwoRecentPost();
-                        foreach($recent_post as $r):
+                    <?php 
+                        if(isset($client_logo)):
+                            foreach($client_logo as  $c): 
                     ?>
-                            <li class="slide-item"><figure class="image-box"><a href="<?= base_url($r->blog_slug) ?>"><img src="<?= $r->blog_image ? base_url('media/' . $r->blog_image) : 'images/resource/post-thumb-1.jpg'  ?>" alt="<?= $r->blog_image_alt ?>"></a></figure></li>
-                    <?php endforeach; ?>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img  loading="lazy" src="<?=  base_url('media/' . $c->portfolio_client_logo) ?>" alt="<?= $c->portfolio_client_logo_alt ?>"></a></figure></li>
+                    <?php
+                            endforeach; 
+                        endif; 
+                    ?>
                 </ul>
             </div>
             

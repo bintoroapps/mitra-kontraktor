@@ -37,9 +37,9 @@
                                 </div>
                                 <div class="lower-content">
                                     <h4><a href="<?= base_url($b->blog_slug) ?>"><?= $b->blog_title ?></a></h4>
-                                    <div class="text">Today we can tell you, thanks to your passion, hardwork creativity, and expertise, you delivered us the most beautiful house great looks. Good work, highly recommend these guys for small or larger projects. Thanks Igor, Vasily & tht team.</div>
+                                    <div class="text"><?= $b->blog_post ?></div>
                                     <div class="lower-box clearfix">
-                                        <a href="news-detail.html" class="theme-btn btn-style-four"><span class="txt">Read More</span></a>
+                                        <a href="<?= base_url($b->blog_slug) ?>" class="theme-btn btn-style-four"><span class="txt">Read Article</span></a>
                                         <ul class="post-meta">
                                             <li><a href="<?= base_url($b->blog_slug) ?>"><span class="icon fa fa-comments"></span><?= \App\Controllers\Template::blog_comment($b->blog_id) ?> Comments</a></li>
                                             <li><span class="icon fa fa-user"></span>By <?= $b->lastname ? $b->firstname . ' ' . $b->lastname : $b->firstname ?></li>
@@ -146,12 +146,12 @@
                         </div>
                         
                         <!--Solution Box-->
-                        <div class="solution-box" style="background-image:url(images/resource/solution.jpg)">
+                             <div class="solution-box" style="background-image:url(images/resource/solution.jpg)">
                             <div class="inner">
-                                <div class="title">Quick Contact</div>
-                                <h2>Get Solution</h2>
-                                <div class="text">Contact us at the Constration office nearest to you or submit a business inquiry online.</div>
-                                <a class="solution-btn theme-btn" href="/contact">Contact Us</a>
+                                <div class="title"><?= $detail->project_detail_page_7_small_title ?></div>
+                                <h2><?= $detail->project_detail_page_7_big_title ?></h2>
+                                <div class="text"><?= $detail->project_detail_page_7_desc ?></div>
+                                <a class="solution-btn theme-btn" href="<?= $detail->project_detail_page_7_link ? $detail->project_detail_page_7_link : '#' ?>"><?= $detail->project_detail_page_7_btn ?></a>
                             </div>
                         </div>
                         
@@ -167,15 +167,16 @@
         <div class="auto-container">
             <div class="sponsors-outer">
                 <!-- Sponsors Carousel -->
-                <ul class="sponsors-carousel owl-carousel owl-theme">
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
-                    <li class="slide-item"><figure class="image-box"><a href="#"><img src="https://via.placeholder.com/180x135" alt=""></a></figure></li>
+                              <ul class="sponsors-carousel owl-carousel owl-theme">
+                    <?php 
+                        if(isset($client_logo)):
+                            foreach($client_logo as  $c): 
+                    ?>
+                    <li class="slide-item"><figure class="image-box"><a href="#"><img  loading="lazy" src="<?=  base_url('media/' . $c->portfolio_client_logo) ?>" alt="<?= $c->portfolio_client_logo_alt ?>"></a></figure></li>
+                    <?php
+                            endforeach; 
+                        endif; 
+                    ?>
                 </ul>
             </div>
             
