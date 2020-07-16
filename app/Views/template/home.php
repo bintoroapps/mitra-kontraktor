@@ -23,7 +23,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 <?= $tracking_code->google_tags ?>
 <?= $tracking_code->google_search_console ?>
 <meta charset="utf-8">
-<title>Mitra Konstruktor | Homepage</title>
+<title>Mitra Kontraktor | Homepage</title>
 
 <!-- Stylesheets -->
 <link href="css/bootstrap.css" rel="stylesheet">
@@ -82,7 +82,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
                 <div class="clearfix">
                     <!--Top Left-->
                     <div class="top-left clearfix">
-						<div class="text">Mitra Konstruktor</div>
+						<div class="text">Mitra Kontraktor</div>
                     </div>
                 </div>
             </div>
@@ -376,7 +376,7 @@ $tracking_code = \App\Controllers\Template::trackingCode();
 							<div class="text"><?= $home->home_page_2_desc ?></div>
 							<div class="btn-box clearfix">
 								<a href="<?= $home->home_page_2_button_link ?>" class="theme-btn btn-style-one"><span class="txt"><?= $home->home_page_2_button ?></span></a>
-								<div class="signature">Mitra Konstruktor</div>
+								<div class="signature">Mitra Kontraktor</div>
 							</div>
 							
 							<!-- Fact Counter -->

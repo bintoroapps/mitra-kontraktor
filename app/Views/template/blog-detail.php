@@ -167,24 +167,20 @@
                         <!-- Popular Posts -->
                         <div class="sidebar-widget popular-posts">
                             <div class="sidebar-title"><h3>Recent news</h3></div>
-
+                                                            <?php 
+                                    if(isset($recent)):
+                                        foreach($recent as $r): 
+                                ?>
                             <article class="post">
-                                <figure class="post-thumb"><img src="images/resource/post-thumb-3.jpg" alt=""><a href="blog-detail.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
-                                <div class="text"><a href="blog-detail.html">Construction Honored With DBC Builderst</a></div>
-                                <div class="post-info">18 May 2020</div>
+                                <figure class="post-thumb"><img src="<?= $r->blog_image ? base_url('media/' . $r->blog_image) : base_url('images/resource/post-thumb-3.jpg') ?>" alt="<?= $r->blog_title ?>"><a href="<?= base_url($r->blog_slug) ?>" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
+                                <div class="text"><a href="blog-detail.html"><?= $r->blog_title ?></a></div>
+                                <div class="post-info">By <?= $r->lastname ? $r->firstname . ' ' . $r->lastname : $r->firstname ?></div>
                             </article>
 
-                            <article class="post">
-                                <figure class="post-thumb"><img src="images/resource/post-thumb-4.jpg" alt=""><a href="blog-detail.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
-                                <div class="text"><a href="blog-detail.html">How Important Is Light In The Living Room?</a></div>
-                                <div class="post-info">18 March 2020</div>
-                            </article>
-                            
-                            <article class="post">
-                                <figure class="post-thumb"><img src="images/resource/post-thumb-5.jpg" alt=""><a href="blog-detail.html" class="overlay-box"><span class="icon fa fa-link"></span></a></figure>
-                                <div class="text"><a href="blog-detail.html">How To Build Attractive Construction Plan</a></div>
-                                <div class="post-info">20 Dec 2019</div>
-                            </article>
+                                <?php
+                                    endforeach; 
+                                    endif; 
+                                ?>
                             
                         </div>
                         
